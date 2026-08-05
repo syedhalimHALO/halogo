@@ -1770,6 +1770,8 @@ body.location-page .leaflet-tile {
   max-height: none !important;
 }
 
+
+
 /* Prevent page-level image rules from shrinking map tiles. */
 body.location-page #map img {
   max-width: none !important;
@@ -1804,36 +1806,213 @@ body.location-page .location-toolbar-locate.is-loading::after {
 }
 
 /* ==========================================================================
-   LEAFLET TILE POSITIONING — FINAL FIX
-   Do not override transform on Leaflet panes. Leaflet writes dynamic
-   translate3d values inline to position tiles and markers correctly.
+   LEAFLET LIVE-SITE RELIABILITY FIX
    ========================================================================== */
 
-body.location-page #map,
-body.location-page #map .leaflet-container {
+body.location-page #map {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+body.location-page #map img,
+body.location-page #map .leaflet-tile {
+  width: 256px !important;
+  height: 256px !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: fill !important;
 }
 
 body.location-page #map .leaflet-pane,
 body.location-page #map .leaflet-map-pane,
 body.location-page #map .leaflet-tile-pane,
+body.location-page #map .leaflet-overlay-pane,
 body.location-page #map .leaflet-marker-pane,
-body.location-page #map .leaflet-shadow-pane,
-body.location-page #map .leaflet-overlay-pane {
-  /* Intentionally no transform declaration here. */
-  will-change: transform;
+body.location-page #map .leaflet-shadow-pane {
+  /* Do not set transform here. Leaflet manages pane positioning inline. */
 }
 
-body.location-page #map .leaflet-tile-container {
+body.location-page .location-map-panel {
+  contain: layout paint;
+}
+
+/* ==========================================================================
+   FULL STORE DIRECTORY — 787 RECORDS
+   ========================================================================== */
+
+body.location-page .location-toolbar {
+  grid-template-columns:
+    minmax(290px, 1.55fr)
+    minmax(155px, .72fr)
+    minmax(155px, .72fr)
+    minmax(155px, .72fr)
+    auto;
+}
+
+body.location-page .location-results-panel {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+body.location-page .location-store-list {
+  min-height: 0;
+}
+
+body.location-page .location-results-footer {
+  display: flex;
+  min-height: 58px;
+  padding: 10px 14px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid rgba(74,37,42,.09);
+  background: rgba(255,255,255,.97);
+}
+
+body.location-page .location-results-footer > span {
+  color: #82787c;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+body.location-page .location-load-more {
+  min-height: 36px;
+  padding: 0 15px;
+  border: 1px solid rgba(166,15,23,.20);
+  border-radius: 11px;
+  background: #fff7f5;
+  color: #a60f17;
+  cursor: pointer;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 800;
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+body.location-page .location-load-more:hover {
+  background: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 9px 22px rgba(84,20,25,.10);
+}
+
+body.location-page .location-load-more[hidden] {
+  display: none;
+}
+
+body.location-page .location-store-card {
+  content-visibility: auto;
+  contain-intrinsic-size: 250px;
+}
+
+body.location-page .location-store-top-copy {
+  min-width: 0;
+}
+
+body.location-page .location-store-card h4 {
+  overflow-wrap: anywhere;
+}
+
+body.location-page .location-store-contact {
+  display: flex;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  color: #776e72;
+  font-size: 9.5px;
+}
+
+body.location-page .location-store-contact a {
+  color: inherit;
+}
+
+body.location-page .location-store-contact a:hover {
+  color: #a60f17;
+}
+
+body.location-page .location-map-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+body.location-page .location-map-availability i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+body.location-page .location-map-availability.is-mapped {
+  color: #198a4d;
+}
+
+body.location-page .location-map-availability.is-mapped i {
+  background: #31bd6f;
+  box-shadow: 0 0 0 4px rgba(49,189,111,.09);
+}
+
+body.location-page .location-map-availability.is-directions {
+  color: #9a6725;
+}
+
+body.location-page .location-map-availability.is-directions i {
+  background: #d69b42;
+  box-shadow: 0 0 0 4px rgba(214,155,66,.10);
+}
+
+body.location-page .location-store-card:not(.has-map) {
+  cursor: default;
+}
+
+body.location-page .location-store-card:not(.has-map):hover {
+  transform: translateY(-2px);
+}
+
+body.location-page .location-store-actions a[aria-disabled="true"] {
   pointer-events: none;
+  opacity: .45;
 }
 
-body.location-page #map .leaflet-tile {
-  width: 256px;
-  height: 256px;
-  max-width: none !important;
-  max-height: none !important;
-  object-fit: fill;
+body.location-page .location-count-flash {
+  animation: locationCountFlash .45s ease;
+}
+
+@keyframes locationCountFlash {
+  0% { transform: translateY(4px); opacity: .45; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 1180px) {
+  body.location-page .location-toolbar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.location-page .location-search-box {
+    grid-column: 1 / -1;
+  }
+
+  body.location-page .location-toolbar-locate {
+    width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  body.location-page .location-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  body.location-page .location-results-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  body.location-page .location-load-more {
+    width: 100%;
+  }
 }
 
