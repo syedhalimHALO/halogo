@@ -18,11 +18,11 @@
 
 
 <link href="css/style-amended.css" rel="stylesheet"/>
-<link href="css/location-style.css?v=20260805-2230" rel="stylesheet"/>
+<link href="css/location-style.css?v=20260805-fullstores-v1" rel="stylesheet"/>
 <script defer src="js/script.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-<script defer src="js/location.js?v=20260805-2230"></script>
+<script defer src="js/location.js?v=20260805-fullstores-v1"></script>
 </head>
 <body class="has-floating-assistant location-page">
 <header class="site-header luxury-header">
@@ -109,8 +109,8 @@
 <span class="location-network-pin location-network-pin--three"><i>H</i></span>
 </div>
 <div class="location-stats-grid">
-<article><strong>787</strong><span>Rekod Lokasi</span></article>
-<article><strong>17</strong><span>Negeri &amp; Wilayah</span></article>
+<article><strong id="totalStoreCount">787</strong><span>Rekod Lokasi</span></article>
+<article><strong id="stateCount">17</strong><span>Negeri &amp; Wilayah</span></article>
 <article><strong id="mappedLocationCount">12</strong><span>Lokasi Peta Aktif</span></article>
 </div>
 </div>
@@ -121,7 +121,7 @@
 <header class="location-section-head location-reveal">
 <div class="eyebrow">Store Locator</div>
 <h2 id="locator-title">Temui lokasi yang paling dekat dengan anda</h2>
-<p>Gunakan carian dan penapis untuk mendapatkan maklumat lokasi, nombor telefon, WhatsApp serta arah perjalanan dengan lebih pantas.</p>
+<p>Cari daripada 787 rekod lokasi. Lokasi tanpa koordinat masih boleh dihubungi dan dibuka terus melalui Google Maps.</p>
 </header>
 <div class="location-toolbar location-reveal location-delay-1">
 <label class="location-search-box" for="searchInput">
@@ -144,6 +144,15 @@
 <span class="sr-only">Tapis negeri</span>
 <select aria-label="Tapis negeri" id="stateFilter">
 <option value="all">Semua Negeri</option>
+</select>
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="m7 10 5 5 5-5"></path></svg>
+</label>
+<label class="location-select-wrap">
+<span class="sr-only">Tapis ketersediaan peta</span>
+<select aria-label="Tapis ketersediaan peta" id="mapFilter">
+<option value="all">Semua Lokasi</option>
+<option value="mapped">Peta Aktif Sahaja</option>
+<option value="directions">Arah Google Maps</option>
 </select>
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="m7 10 5 5 5-5"></path></svg>
 </label>
@@ -183,6 +192,10 @@
 </label>
 </div>
 <div class="location-store-list" id="storeList"></div>
+<div class="location-results-footer">
+  <span id="resultsShown">Memaparkan 0 lokasi</span>
+  <button class="location-load-more" id="loadMoreBtn" type="button">Papar Lagi</button>
+</div>
 </aside>
 </div>
 </div>
