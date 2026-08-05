@@ -1,0 +1,1870 @@
+/* ========================================================================
+   HaloGo Partner — Business Page Final Luxury Polish V1
+   Loaded after style.css. All rules are scoped to business.html only.
+   ======================================================================== */
+
+body.business-page.business-final-luxury-v1 {
+  --biz-lux-gold-1: #f7e3b5;
+  --biz-lux-gold-2: #e6b85e;
+  --biz-lux-gold-3: #b9692f;
+  --biz-lux-red: #e31c25;
+  --biz-lux-burgundy: #5e0910;
+  --biz-lux-ink: #17171a;
+  --biz-lux-warm: #f6f2ed;
+  --biz-lux-line: rgba(56, 31, 34, 0.10);
+  --biz-lux-shadow: 0 24px 64px rgba(53, 20, 24, 0.10);
+  --biz-lux-shadow-hover: 0 34px 76px rgba(88, 19, 26, 0.16);
+  overflow-x: clip;
+  background: #fff;
+}
+
+body.business-page.business-final-luxury-v1 main {
+  position: relative;
+  overflow: clip;
+}
+
+/* Fine-grain overlay matching the premium homepage finish. */
+.business-luxury-grain {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  pointer-events: none;
+  opacity: .022;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+/* ------------------------------------------------------------------------
+   Consistent section rhythm and editorial headings
+   ------------------------------------------------------------------------ */
+body.business-page.business-final-luxury-v1 main > section:not(.biz-hero) {
+  isolation: isolate;
+}
+
+body.business-page.business-final-luxury-v1 main > section:not(.biz-hero):not(.final-cta-section)::after {
+  position: absolute;
+  z-index: 0;
+  right: max(26px, calc((100vw - 1220px) / 2));
+  bottom: 0;
+  left: max(26px, calc((100vw - 1220px) / 2));
+  height: 1px;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(77, 37, 42, .10) 18%, rgba(77, 37, 42, .10) 82%, transparent);
+}
+
+body.business-page.business-final-luxury-v1 .biz-section-head,
+body.business-page.business-final-luxury-v1 .halogo-steps-header {
+  width: min(100%, 980px);
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+body.business-page.business-final-luxury-v1 .biz-section-head h2,
+body.business-page.business-final-luxury-v1 .halogo-steps-header h2 {
+  font-size: clamp(38px, 4vw, 56px);
+  line-height: 1.07;
+  letter-spacing: -.048em;
+}
+
+body.business-page.business-final-luxury-v1 .biz-section-head > p,
+body.business-page.business-final-luxury-v1 .halogo-steps-header > p {
+  max-width: 850px;
+  margin: 14px auto 0;
+  line-height: 1.58;
+  white-space: normal;
+}
+
+body.business-page.business-final-luxury-v1 .eyebrow,
+body.business-page.business-final-luxury-v1 .halogo-steps-eyebrow {
+  justify-content: center;
+}
+
+/* ------------------------------------------------------------------------
+   Hero — deeper cinematic polish with homepage-quality CTA treatment
+   ------------------------------------------------------------------------ */
+body.business-page.business-final-luxury-v1 .biz-hero {
+  min-height: 660px;
+  background:
+    radial-gradient(circle at 14% 14%, rgba(255,255,255,.11), transparent 22%),
+    radial-gradient(circle at 84% 78%, rgba(255,92,102,.22), transparent 31%),
+    radial-gradient(circle at 74% 14%, rgba(228,184,94,.11), transparent 19%),
+    linear-gradient(126deg, #230508 0%, #5b080e 43%, #a91019 100%);
+}
+
+body.business-page.business-final-luxury-v1 .biz-hero::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(17,2,4,.16), transparent 46%, rgba(17,2,4,.06));
+}
+
+body.business-page.business-final-luxury-v1 .biz-hero-wrap {
+  min-height: 660px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+body.business-page.business-final-luxury-v1 .biz-hero-copy {
+  filter: drop-shadow(0 18px 32px rgba(42,0,4,.12));
+}
+
+body.business-page.business-final-luxury-v1 .biz-hero h1 {
+  font-size: clamp(46px, 4.75vw, 74px);
+}
+
+body.business-page.business-final-luxury-v1 .biz-hero h1 span {
+  color: #efcd89;
+  text-shadow: 0 12px 34px rgba(239,205,137,.11);
+}
+
+body.business-page.business-final-luxury-v1 .biz-primary-btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-color: rgba(255,239,204,.65);
+  background: linear-gradient(135deg, var(--biz-lux-gold-1), var(--biz-lux-gold-2) 48%, var(--biz-lux-gold-3));
+  color: #541015;
+  box-shadow:
+    0 18px 36px rgba(117,48,24,.32),
+    inset 0 1px 0 rgba(255,255,255,.60);
+}
+
+body.business-page.business-final-luxury-v1 .biz-primary-btn::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -120%;
+  width: 58%;
+  height: 100%;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.56), transparent);
+  transform: skewX(-24deg);
+  transition: left .76s cubic-bezier(.2,.8,.2,1);
+}
+
+body.business-page.business-final-luxury-v1 .biz-primary-btn:hover {
+  border-color: rgba(255,246,221,.86);
+  background: linear-gradient(135deg, #fae9c0, #edc873 48%, #c97a38);
+  color: #450a0e;
+  transform: translateY(-3px);
+  box-shadow:
+    0 25px 48px rgba(117,48,24,.44),
+    0 0 0 5px rgba(232,184,94,.10),
+    inset 0 1px 0 rgba(255,255,255,.67);
+}
+
+body.business-page.business-final-luxury-v1 .biz-primary-btn:hover::before {
+  left: 175%;
+}
+
+body.business-page.business-final-luxury-v1 .biz-secondary-btn {
+  border-color: rgba(255,255,255,.38);
+  background: rgba(255,255,255,.075);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+body.business-page.business-final-luxury-v1 .biz-hero-visual {
+  --lux-hero-x: 0px;
+  --lux-hero-y: 0px;
+  transform: translate3d(var(--lux-hero-x), var(--lux-hero-y), 0);
+  transition: transform .55s cubic-bezier(.2,.8,.2,1);
+  will-change: transform;
+}
+
+body.business-page.business-final-luxury-v1 .biz-dashboard-shell {
+  border-color: rgba(255,255,255,.26);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.16), rgba(255,255,255,.045)),
+    rgba(25,3,6,.48);
+  box-shadow:
+    0 44px 88px rgba(25,0,3,.42),
+    0 0 0 10px rgba(255,255,255,.025),
+    inset 0 1px 0 rgba(255,255,255,.18);
+}
+
+body.business-page.business-final-luxury-v1 .biz-floating-card {
+  border-color: rgba(255,255,255,.48);
+  box-shadow: 0 24px 50px rgba(31,0,3,.27);
+}
+
+/* ------------------------------------------------------------------------
+   Floating quick navigation — same glass language as index header
+   ------------------------------------------------------------------------ */
+body.business-page.business-final-luxury-v1 .biz-quick-nav {
+  top: 92px;
+  z-index: 460;
+  padding: 9px 0;
+  border-bottom: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+body.business-page.business-final-luxury-v1 .biz-quick-nav-shell {
+  width: min(1180px, calc(100% - 30px));
+  margin: 0 auto;
+  border: 1px solid rgba(74,37,42,.09);
+  border-radius: 20px;
+  background: rgba(255,255,255,.86);
+  box-shadow:
+    0 16px 40px rgba(48,18,23,.09),
+    inset 0 1px 0 rgba(255,255,255,.95);
+  -webkit-backdrop-filter: blur(18px) saturate(1.08);
+  backdrop-filter: blur(18px) saturate(1.08);
+}
+
+body.business-page.business-final-luxury-v1 .biz-quick-nav-inner {
+  min-height: 52px;
+  padding: 7px 14px;
+}
+
+body.business-page.business-final-luxury-v1 .biz-quick-nav a {
+  min-height: 38px;
+  padding: 8px 13px;
+  border-radius: 999px;
+  color: #5d5659;
+  transition: color .25s ease, background .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+
+body.business-page.business-final-luxury-v1 .biz-quick-nav a:hover,
+body.business-page.business-final-luxury-v1 .biz-quick-nav a:focus-visible,
+body.business-page.business-final-luxury-v1 .biz-quick-nav a.is-active {
+  background: linear-gradient(135deg, #fff6f6, #fff);
+  color: #a50f17;
+  box-shadow: 0 8px 18px rgba(96,18,24,.08);
+  transform: translateY(-1px);
+}
+
+body.business-page.business-final-luxury-v1 .biz-quick-nav a.is-active::after {
+  position: absolute;
+  right: 12px;
+  bottom: 4px;
+  left: 12px;
+  height: 2px;
+  border-radius: 999px;
+  content: "";
+  background: linear-gradient(90deg, #e31c25, #e5b35d);
+}
+
+body.business-page.business-final-luxury-v1 .biz-quick-nav-progress {
+  color: #a80f18;
+}
+
+/* ------------------------------------------------------------------------
+   Section backgrounds — coherent light/warm/dark editorial rhythm
+   ------------------------------------------------------------------------ */
+body.business-page.business-final-luxury-v1 .biz-overview-luxe-section {
+  padding-top: 104px;
+  padding-bottom: 112px;
+  background:
+    radial-gradient(circle at 92% 12%, rgba(227,28,37,.045), transparent 24%),
+    radial-gradient(circle at 6% 88%, rgba(179,126,61,.055), transparent 25%),
+    linear-gradient(180deg, #f8f5f1 0%, #f4efea 100%);
+}
+
+body.business-page.business-final-luxury-v1 .biz-overview-luxe-card {
+  border-radius: 30px;
+  box-shadow: 0 20px 54px rgba(54,20,24,.11);
+  transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s ease, border-color .45s ease;
+}
+
+body.business-page.business-final-luxury-v1 .biz-overview-luxe-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--biz-lux-shadow-hover);
+}
+
+body.business-page.business-final-luxury-v1 .biz-overview-luxe-media img {
+  transition: transform .8s cubic-bezier(.2,.8,.2,1), filter .5s ease, opacity .65s ease;
+}
+
+body.business-page.business-final-luxury-v1 .biz-overview-luxe-card:hover .biz-overview-luxe-media img {
+  transform: scale(1.045);
+  filter: saturate(1.04) contrast(1.025);
+}
+
+body.business-page.business-final-luxury-v1 .biz-overview-luxe-cta {
+  border: 1px solid rgba(91,47,41,.10);
+  border-radius: 24px;
+  background: rgba(255,255,255,.72);
+  box-shadow: 0 18px 44px rgba(62,27,25,.07);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+body.business-page.business-final-luxury-v1 .biz-income-section {
+  padding-top: 102px;
+  padding-bottom: 108px;
+  background:
+    radial-gradient(circle at 7% 16%, rgba(227,28,37,.045), transparent 22%),
+    #fff;
+}
+
+body.business-page.business-final-luxury-v1 .biz-income-card {
+  min-height: 386px;
+  border-radius: 24px;
+  box-shadow: 0 20px 46px rgba(25,15,17,.11);
+}
+
+body.business-page.business-final-luxury-v1 .biz-income-card:hover,
+body.business-page.business-final-luxury-v1 .biz-income-card:focus-within {
+  transform: translateY(-9px);
+  box-shadow: 0 30px 64px rgba(103,17,24,.20);
+}
+
+body.business-page.business-final-luxury-v1 .biz-registration-section {
+  padding-top: 96px;
+  padding-bottom: 104px;
+  background:
+    radial-gradient(circle at 90% 8%, rgba(227,28,37,.055), transparent 24%),
+    radial-gradient(circle at 10% 90%, rgba(207,160,82,.075), transparent 25%),
+    linear-gradient(180deg, #f7f3ee 0%, #f2ece6 100%);
+}
+
+body.business-page.business-final-luxury-v1 .biz-registration-stage,
+body.business-page.business-final-luxury-v1 .biz-registration-phone-shell,
+body.business-page.business-final-luxury-v1 .biz-registration-detail-panel {
+  box-shadow: var(--biz-lux-shadow);
+}
+
+body.business-page.business-final-luxury-v1 .biz-sales-section {
+  padding-top: 102px;
+  padding-bottom: 110px;
+  background:
+    radial-gradient(circle at 92% 82%, rgba(227,28,37,.04), transparent 24%),
+    linear-gradient(180deg, #fff 0%, #fbfaf9 100%);
+}
+
+body.business-page.business-final-luxury-v1 .biz-sales-story,
+body.business-page.business-final-luxury-v1 .biz-sales-visual-frame {
+  border-radius: 28px;
+}
+
+body.business-page.business-final-luxury-v1 .biz-resources-section {
+  padding-top: 88px;
+  padding-bottom: 92px;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(227,28,37,.045), transparent 22%),
+    linear-gradient(180deg, #f6f2ed 0%, #f2ede7 100%);
+}
+
+body.business-page.business-final-luxury-v1 .biz-toolkit-rail {
+  border: 1px solid rgba(74,37,42,.10);
+  border-radius: 28px;
+  background: rgba(255,255,255,.80);
+  box-shadow: 0 24px 58px rgba(55,22,25,.09);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+body.business-page.business-final-luxury-v1 .biz-toolkit-item {
+  transition: transform .35s cubic-bezier(.2,.8,.2,1), background .35s ease, box-shadow .35s ease;
+}
+
+body.business-page.business-final-luxury-v1 .biz-toolkit-item:hover,
+body.business-page.business-final-luxury-v1 .biz-toolkit-item:focus-visible {
+  transform: translateY(-4px);
+}
+
+body.business-page.business-final-luxury-v1 .biz-rewards-section {
+  padding-top: 96px;
+  padding-bottom: 104px;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(227,28,37,.035), transparent 26%),
+    #fff;
+}
+
+body.business-page.business-final-luxury-v1 .biz-milestone-shell {
+  border: 1px solid rgba(69,35,39,.09);
+  background: linear-gradient(180deg, rgba(255,255,255,.97), rgba(249,246,242,.96));
+  box-shadow: 0 28px 72px rgba(58,22,26,.10);
+}
+
+body.business-page.business-final-luxury-v1 .biz-milestone-tab:hover .biz-milestone-node,
+body.business-page.business-final-luxury-v1 .biz-milestone-tab:focus-visible .biz-milestone-node,
+body.business-page.business-final-luxury-v1 .biz-milestone-tab.is-active .biz-milestone-node {
+  box-shadow: none;
+}
+
+/* Commission remains the dark visual anchor. */
+body.business-page.business-final-luxury-v1 .biz-commission-studio {
+  padding-top: 68px;
+  padding-bottom: 70px;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(148,12,26,.35), transparent 27%),
+    radial-gradient(circle at 84% 14%, rgba(232,183,95,.11), transparent 21%),
+    radial-gradient(circle at 92% 72%, rgba(179,20,34,.18), transparent 22%),
+    linear-gradient(180deg, #120609 0%, #0d0f14 52%, #090b10 100%);
+}
+
+body.business-page.business-final-luxury-v1 .biz-commission-studio::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  opacity: .22;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(circle at center, #000 10%, transparent 72%);
+  mask-image: radial-gradient(circle at center, #000 10%, transparent 72%);
+}
+
+/* ------------------------------------------------------------------------
+   Final CTA and footer transition
+   ------------------------------------------------------------------------ */
+body.business-page.business-final-luxury-v1 .final-cta-section {
+  padding-top: 84px;
+  padding-bottom: 84px;
+  background:
+    radial-gradient(circle at 84% 12%, rgba(255,93,103,.22), transparent 27%),
+    radial-gradient(circle at 8% 98%, rgba(255,255,255,.06), transparent 26%),
+    linear-gradient(130deg, #1d0508 0%, #520a10 54%, #8e1018 100%);
+}
+
+body.business-page.business-final-luxury-v1 .final-cta-section .cta-luxe-banner {
+  border-color: rgba(255,255,255,.16);
+  background: linear-gradient(135deg, rgba(255,255,255,.085), rgba(255,255,255,.018));
+  box-shadow:
+    0 34px 86px rgba(18,0,3,.30),
+    inset 0 1px 0 rgba(255,255,255,.13);
+}
+
+body.business-page.business-final-luxury-v1 .site-footer {
+  background: #0f0e10;
+}
+
+/* ------------------------------------------------------------------------
+   Scroll and image reveal system
+   ------------------------------------------------------------------------ */
+body.business-page.business-final-luxury-v1.biz-luxury-motion-ready .biz-luxury-reveal {
+  opacity: 0;
+  filter: blur(6px);
+  transform: translateY(24px);
+  transition:
+    opacity .78s ease var(--biz-reveal-delay, 0ms),
+    filter .78s ease var(--biz-reveal-delay, 0ms),
+    transform .78s cubic-bezier(.2,.8,.2,1) var(--biz-reveal-delay, 0ms);
+}
+
+body.business-page.business-final-luxury-v1.biz-luxury-motion-ready .biz-luxury-reveal.biz-luxury-reveal--soft {
+  transform: translateY(15px);
+}
+
+body.business-page.business-final-luxury-v1.biz-luxury-motion-ready .biz-luxury-reveal.is-revealed {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+body.business-page.business-final-luxury-v1 img.biz-luxury-image {
+  opacity: .42;
+  filter: blur(12px) saturate(.84);
+  transition: opacity .8s ease, filter .8s ease;
+}
+
+body.business-page.business-final-luxury-v1 img.biz-luxury-image.is-loaded {
+  opacity: 1;
+  filter: blur(0) saturate(1);
+}
+
+/* ------------------------------------------------------------------------
+   Responsive refinement
+   ------------------------------------------------------------------------ */
+@media (max-width: 1100px) {
+  body.business-page.business-final-luxury-v1 .biz-quick-nav {
+    top: 84px;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-overview-luxe-section,
+  body.business-page.business-final-luxury-v1 .biz-income-section,
+  body.business-page.business-final-luxury-v1 .biz-registration-section,
+  body.business-page.business-final-luxury-v1 .biz-sales-section,
+  body.business-page.business-final-luxury-v1 .biz-rewards-section {
+    padding-top: 84px;
+    padding-bottom: 90px;
+  }
+}
+
+@media (max-width: 820px) {
+  body.business-page.business-final-luxury-v1 .biz-hero {
+    min-height: auto;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-hero-wrap {
+    min-height: auto;
+    padding-top: 64px;
+    padding-bottom: 62px;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav {
+    top: 75px;
+    padding: 7px 0;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav-shell {
+    width: calc(100% - 20px);
+    border-radius: 17px;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-section-head h2,
+  body.business-page.business-final-luxury-v1 .halogo-steps-header h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 620px) {
+  .business-luxury-grain {
+    display: none;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-hero h1 {
+    font-size: clamp(39px, 11vw, 52px);
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-hero-copy > p {
+    font-size: 14.5px;
+    line-height: 1.62;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-hero-actions .btn {
+    width: 100%;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav-progress {
+    display: none;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav-inner {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-overview-luxe-section,
+  body.business-page.business-final-luxury-v1 .biz-income-section,
+  body.business-page.business-final-luxury-v1 .biz-registration-section,
+  body.business-page.business-final-luxury-v1 .biz-sales-section,
+  body.business-page.business-final-luxury-v1 .biz-rewards-section,
+  body.business-page.business-final-luxury-v1 .biz-resources-section {
+    padding-top: 68px;
+    padding-bottom: 74px;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-commission-studio {
+    padding-top: 58px;
+    padding-bottom: 60px;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-section-head h2,
+  body.business-page.business-final-luxury-v1 .halogo-steps-header h2 {
+    font-size: 34px;
+    line-height: 1.12;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.business-page.business-final-luxury-v1 .biz-primary-btn,
+  body.business-page.business-final-luxury-v1 .biz-primary-btn::before,
+  body.business-page.business-final-luxury-v1 .biz-hero-visual,
+  body.business-page.business-final-luxury-v1 .biz-luxury-reveal,
+  body.business-page.business-final-luxury-v1 img.biz-luxury-image {
+    transition: none !important;
+  }
+
+  body.business-page.business-final-luxury-v1.biz-luxury-motion-ready .biz-luxury-reveal {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
+
+
+/* ========================================================================
+   Business Final Luxury Polish V1.1 — Overview readability fixes
+   ======================================================================== */
+
+/* Keep the overview introduction centred and exactly two lines on desktop. */
+@media (min-width: 981px) {
+  body.business-page.business-final-luxury-v1
+  .biz-section-head--showcase {
+    width: min(1320px, calc(100vw - 72px));
+    max-width: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  body.business-page.business-final-luxury-v1
+  .biz-section-head--showcase .biz-overview-intro-copy {
+    width: 100%;
+    max-width: none;
+    margin: 14px auto 0;
+    font-size: 14.5px;
+    line-height: 1.62;
+    text-align: center;
+  }
+
+  body.business-page.business-final-luxury-v1
+  .biz-overview-intro-copy span {
+    display: block;
+    white-space: nowrap;
+  }
+}
+
+/* The CTA is light in the luxury polish, so use dark premium copy. */
+body.business-page.business-final-luxury-v1
+.biz-overview-luxe-cta-copy strong {
+  color: #24191b;
+  text-shadow: none;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-overview-luxe-cta-copy span {
+  color: #b27c2f;
+}
+
+@media (max-width: 980px) {
+  body.business-page.business-final-luxury-v1
+  .biz-section-head--showcase {
+    width: 100%;
+    max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
+    transform: none;
+  }
+
+  body.business-page.business-final-luxury-v1
+  .biz-section-head--showcase .biz-overview-intro-copy {
+    max-width: 720px;
+    font-size: 15px;
+  }
+
+  body.business-page.business-final-luxury-v1
+  .biz-overview-intro-copy span {
+    display: inline;
+    white-space: normal;
+  }
+}
+
+
+/* ========================================================================
+   Business Final Luxury Polish V1.2
+   - Commission disclaimer: one-line centered desktop treatment
+   - Vertical quick navigation: conflict-safe desktop reset
+   ======================================================================== */
+
+body.business-page.business-final-luxury-v1 .biz-commission-disclaimer {
+  display: block;
+  width: max-content;
+  max-width: calc(100vw - 48px);
+  margin: 6px auto 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+  body.business-page.business-final-luxury-v1 .biz-commission-disclaimer {
+    width: auto;
+    max-width: 900px;
+    white-space: normal;
+  }
+}
+
+/* Desktop vertical menu must override the earlier floating glass toolbar. */
+@media (min-width: 981px) {
+  body.business-page.business-final-luxury-v1 .biz-quick-nav {
+    position: fixed;
+    z-index: 460;
+    top: 50%;
+    right: max(12px, env(safe-area-inset-right));
+    bottom: auto;
+    left: auto;
+    width: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: .76;
+    transform: translateY(-50%);
+    transition: opacity .28s ease;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav:hover,
+  body.business-page.business-final-luxury-v1 .biz-quick-nav:focus-within {
+    opacity: 1;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav-shell {
+    display: grid;
+    width: 44px;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav-progress {
+    display: flex;
+    min-height: 32px;
+    gap: 1px;
+    align-items: baseline;
+    justify-content: center;
+    color: #8f7779;
+    text-shadow: 0 1px 10px rgba(255,255,255,.92);
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav-progress strong {
+    color: rgba(35,22,25,.84);
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav-progress span,
+  body.business-page.business-final-luxury-v1 .biz-quick-nav-progress small {
+    color: rgba(98,75,80,.62);
+    font-size: 8.5px;
+    line-height: 1;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav-inner,
+  body.business-page.business-final-luxury-v1 .biz-quick-nav-inner.wrap {
+    --nav-line-x: 50%;
+    position: relative;
+    display: grid;
+    width: 34px;
+    min-height: 0;
+    height: 238px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 0;
+    align-items: center;
+    justify-items: center;
+    overflow: visible;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav-inner::before {
+    position: absolute;
+    z-index: 0;
+    top: 15px;
+    bottom: 15px;
+    left: var(--nav-line-x);
+    width: 1px;
+    height: auto;
+    border: 0;
+    border-radius: 999px;
+    content: "";
+    background: linear-gradient(180deg,
+      rgba(104,78,84,.05),
+      rgba(104,78,84,.24) 15%,
+      rgba(104,78,84,.24) 85%,
+      rgba(104,78,84,.05));
+    box-shadow: 0 0 8px rgba(91,65,71,.08);
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav-inner::after {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: auto;
+    bottom: auto;
+    left: var(--nav-line-x);
+    width: 1px;
+    height: var(--section-progress, 0%);
+    max-height: calc(100% - 30px);
+    border: 0;
+    border-radius: 999px;
+    content: "";
+    background: linear-gradient(180deg, #e5c17a 0%, #e31c25 76%, #b8151c 100%);
+    box-shadow: 0 0 6px rgba(227,28,37,.34), 0 0 14px rgba(216,179,106,.15);
+    transform: translateX(-50%);
+    transition: height .42s cubic-bezier(.22,.8,.22,1);
+    pointer-events: none;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav a {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+    min-height: 34px;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: none;
+    color: inherit;
+    transform: none;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav a:hover,
+  body.business-page.business-final-luxury-v1 .biz-quick-nav a:focus-visible,
+  body.business-page.business-final-luxury-v1 .biz-quick-nav a.is-active,
+  body.business-page.business-final-luxury-v1 .biz-quick-nav a[aria-current="location"] {
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav a span {
+    display: none !important;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav a::before {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    content: "";
+    background: rgba(113,89,94,.22);
+    box-shadow: 0 0 0 3px rgba(255,255,255,.56);
+    opacity: .72;
+    transform: translate(-50%, -50%);
+    transition: width .25s ease, height .25s ease, opacity .25s ease, background .25s ease, box-shadow .25s ease;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav a::after {
+    position: absolute;
+    inset: 6px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    content: "";
+    background: transparent;
+    opacity: 0;
+    transform: none;
+    transition: opacity .25s ease, border-color .25s ease, box-shadow .25s ease;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav a:hover::before,
+  body.business-page.business-final-luxury-v1 .biz-quick-nav a:focus-visible::before {
+    width: 7px;
+    height: 7px;
+    background: rgba(227,28,37,.42);
+    opacity: .9;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav a.is-active::before,
+  body.business-page.business-final-luxury-v1 .biz-quick-nav a[aria-current="location"]::before {
+    width: 9px;
+    height: 9px;
+    background: linear-gradient(180deg, #ff5963, #d50f1a);
+    box-shadow: 0 0 0 4px rgba(255,255,255,.92), 0 0 12px rgba(227,28,37,.55), 0 0 24px rgba(216,179,106,.18);
+    opacity: 1;
+  }
+
+  body.business-page.business-final-luxury-v1 .biz-quick-nav a.is-active::after,
+  body.business-page.business-final-luxury-v1 .biz-quick-nav a[aria-current="location"]::after {
+    inset: 5px;
+    border-color: rgba(216,179,106,.72);
+    box-shadow: 0 0 14px rgba(216,179,106,.16);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1180px) {
+  body.business-page.business-final-luxury-v1 .biz-quick-nav {
+    right: 7px;
+  }
+}
+
+
+/* ========================================================================
+   Overview intro copy — definitive centered two-line layout
+   ======================================================================== */
+body.business-page.business-final-luxury-v1
+.biz-overview-luxe-section .biz-overview-intro-copy {
+  display: grid;
+  width: min(100%, 1240px);
+  max-width: 1240px;
+  margin: 14px auto 0;
+  padding: 0;
+  justify-items: center;
+  color: #666166;
+  text-align: center;
+  line-height: 1.62;
+  text-wrap: balance;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-overview-luxe-section .biz-overview-intro-copy span {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: 981px) {
+  body.business-page.business-final-luxury-v1
+  .biz-overview-luxe-section .biz-overview-intro-copy {
+    max-width: none;
+    font-size: 14.5px;
+  }
+
+  body.business-page.business-final-luxury-v1
+  .biz-overview-luxe-section .biz-overview-intro-copy span {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 980px) {
+  body.business-page.business-final-luxury-v1
+  .biz-overview-luxe-section .biz-overview-intro-copy {
+    max-width: 760px;
+    padding-right: 14px;
+    padding-left: 14px;
+    font-size: 15px;
+  }
+
+  body.business-page.business-final-luxury-v1
+  .biz-overview-luxe-section .biz-overview-intro-copy span {
+    display: inline;
+    width: auto;
+    white-space: normal;
+  }
+
+  body.business-page.business-final-luxury-v1
+  .biz-overview-luxe-section .biz-overview-intro-copy span + span::before {
+    content: " ";
+  }
+}
+/* =========================================================
+   COMMISSION SECTION — EXTRA COMPACT V2
+========================================================= */
+
+body.business-page.business-final-luxury-v1 .biz-commission-studio {
+  padding-top: 44px;
+  padding-bottom: 42px;
+}
+
+body.business-page.business-final-luxury-v1 .biz-commission-wrap {
+  gap: 14px;
+}
+
+body.business-page.business-final-luxury-v1 .biz-commission-head {
+  margin-bottom: 0;
+}
+
+body.business-page.business-final-luxury-v1 .biz-commission-head p {
+  margin-top: 8px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-studio-shell {
+  gap: 12px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-strip {
+  padding: 12px 20px 10px;
+  border-radius: 24px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-intro {
+  margin-bottom: 6px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-intro strong {
+  font-size: 15px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-dot {
+  width: 58px;
+  height: 58px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-line {
+  top: 38px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-node {
+  gap: 2px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-node > strong {
+  font-size: 17px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-dashboard--studio {
+  gap: 12px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-calculator,
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-result {
+  padding: 14px 16px 13px;
+  border-radius: 22px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-panel-head {
+  margin-bottom: 10px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-panel-head p {
+  margin-top: 5px;
+  line-height: 1.42;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-toggle {
+  margin-bottom: 10px;
+  padding: 9px 12px;
+  border-radius: 16px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-fields--studio {
+  gap: 8px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-input-wrap {
+  height: 42px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-total {
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-total output {
+  font-size: clamp(28px, 3vw, 42px);
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-breakdown {
+  margin-top: 8px;
+  padding-top: 8px;
+  gap: 6px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-result-note {
+  margin-top: 8px;
+  padding: 8px 10px;
+  line-height: 1.4;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-help {
+  margin-top: 8px;
+  min-height: 40px;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-disclaimer {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   COMMISSION TIER RAIL — REMOVE INNER SHARP-EDGE BOX
+========================================================= */
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-viewport,
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-track,
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-list,
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-list--studio {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-viewport::before,
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-viewport::after,
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-track::before,
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-track::after,
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-list::before,
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-list::after,
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-list--studio::before,
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-list--studio::after {
+  display: none;
+  content: none;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-commission-studio .biz-commission-tier-track {
+  overflow: visible;
+}
+
+
+/* ========================================================================
+   HaloGo Partner — Interactive Income Calculator V1
+   ======================================================================== */
+body.business-page.business-final-luxury-v1 .halo-income-calculator{padding:72px 0 64px;background:radial-gradient(circle at 12% 10%,rgba(227,28,37,.055),transparent 26%),linear-gradient(180deg,#fff 0%,#faf8f7 100%);color:#17171a}
+body.business-page.business-final-luxury-v1 .halo-calc-wrap{max-width:1380px}
+body.business-page.business-final-luxury-v1 .halo-calc-head{max-width:920px;margin-bottom:34px}
+body.business-page.business-final-luxury-v1 .halo-calc-head h2{color:#17171a}
+body.business-page.business-final-luxury-v1 .halo-calc-head h2 span{color:#e31c25}
+body.business-page.business-final-luxury-v1 .halo-calc-layout{display:grid;grid-template-columns:minmax(360px,.92fr) minmax(440px,1.08fr) minmax(230px,.48fr);gap:16px;align-items:stretch}
+body.business-page.business-final-luxury-v1 .halo-calc-controls,body.business-page.business-final-luxury-v1 .halo-calc-achievement{padding:24px;border:1px solid rgba(35,25,27,.09);border-radius:24px;background:rgba(255,255,255,.96);box-shadow:0 22px 58px rgba(44,20,23,.08)}
+body.business-page.business-final-luxury-v1 .halo-calc-step{display:grid;grid-template-columns:42px 1fr;gap:14px;padding:0 0 22px;margin-bottom:22px;border-bottom:1px solid #ece8e8}
+body.business-page.business-final-luxury-v1 .halo-calc-step-icon{display:grid;width:42px;height:42px;place-items:center;border-radius:50%;background:#fff0f1;color:#e31c25;font-size:12px;font-weight:800}
+body.business-page.business-final-luxury-v1 .halo-calc-step-body{min-width:0}
+body.business-page.business-final-luxury-v1 .halo-calc-label-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+body.business-page.business-final-luxury-v1 .halo-calc-step-body strong,body.business-page.business-final-luxury-v1 .halo-calc-field-title{display:block;color:#19191b;font-size:14px;font-weight:800}
+body.business-page.business-final-luxury-v1 .halo-calc-step-body small{display:block;margin-top:3px;color:#7b777a;font-size:11.5px;line-height:1.45}
+body.business-page.business-final-luxury-v1 [data-halo-qty-output]{color:#e31c25;font-family:var(--font-display);font-size:30px;font-weight:800;line-height:1}
+body.business-page.business-final-luxury-v1 [data-halo-qty]{width:100%;margin:19px 0 10px;accent-color:#e31c25}
+body.business-page.business-final-luxury-v1 .halo-calc-presets{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+body.business-page.business-final-luxury-v1 .halo-calc-presets button{min-height:34px;border:1px solid #e6e2e3;border-radius:999px;background:#fff;color:#363236;font:700 11px var(--font-body);cursor:pointer;transition:.22s ease}
+body.business-page.business-final-luxury-v1 .halo-calc-presets button:hover,body.business-page.business-final-luxury-v1 .halo-calc-presets button.is-active{border-color:#e31c25;background:linear-gradient(135deg,#f32932,#c70e17);color:#fff;box-shadow:0 8px 18px rgba(227,28,37,.18)}
+body.business-page.business-final-luxury-v1 .halo-calc-step select{width:100%;height:47px;margin-top:12px;padding:0 14px;border:1px solid #ded9da;border-radius:13px;background:#fff;color:#181719;font:700 13px var(--font-body);outline:none}
+body.business-page.business-final-luxury-v1 .halo-calc-step select:focus{border-color:#e31c25;box-shadow:0 0 0 4px rgba(227,28,37,.08)}
+body.business-page.business-final-luxury-v1 .halo-calc-switch{display:flex;align-items:center;gap:10px;margin-top:14px;cursor:pointer}
+body.business-page.business-final-luxury-v1 .halo-calc-switch input{position:absolute;opacity:0}
+body.business-page.business-final-luxury-v1 .halo-calc-switch>span{position:relative;width:42px;height:24px;border-radius:999px;background:#d8d3d4;transition:.22s ease}
+body.business-page.business-final-luxury-v1 .halo-calc-switch>span i{position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.18);transition:.22s ease}
+body.business-page.business-final-luxury-v1 .halo-calc-switch input:checked+span{background:#e31c25}
+body.business-page.business-final-luxury-v1 .halo-calc-switch input:checked+span i{transform:translateX(18px)}
+body.business-page.business-final-luxury-v1 .halo-calc-switch strong{font-size:12px}
+body.business-page.business-final-luxury-v1 .halo-calc-auto-tier{display:flex;align-items:center;gap:9px;padding:12px 13px;border-radius:14px;background:#f8f5f3;color:#6b6365;font-size:11px}
+body.business-page.business-final-luxury-v1 .halo-calc-auto-tier strong{margin-left:auto;color:#e31c25;font-size:12px}.halo-calc-auto-tier small{display:none}
+body.business-page.business-final-luxury-v1 .halo-calc-mini-note{margin:13px 0 0;color:#8b8588;font-size:10px;line-height:1.55}
+body.business-page.business-final-luxury-v1 .halo-calc-result{position:relative;isolation:isolate;overflow:hidden;padding:26px;border:1px solid rgba(227,28,37,.26);border-radius:24px;background:radial-gradient(circle at 88% 12%,rgba(227,28,37,.32),transparent 30%),linear-gradient(145deg,#08090c,#171114 58%,#2c090d);box-shadow:0 28px 68px rgba(24,5,8,.25);color:#fff}
+body.business-page.business-final-luxury-v1 .halo-calc-result-glow{position:absolute;z-index:-1;right:-70px;top:-80px;width:250px;height:250px;border:1px solid rgba(255,255,255,.10);border-radius:50%;box-shadow:0 0 0 34px rgba(227,28,37,.05),0 0 0 72px rgba(227,28,37,.035)}
+body.business-page.business-final-luxury-v1 .halo-calc-result-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.halo-calc-result-head span{padding:7px 12px;border:1px solid rgba(255,72,82,.55);border-radius:999px;color:#ffc7ca;font-size:10px;font-weight:800;text-transform:uppercase}.halo-calc-result-head strong{color:#e8c271;font-size:11px}
+body.business-page.business-final-luxury-v1 .halo-calc-total-copy{padding:22px 0 18px}.halo-calc-total-copy>span{display:block;color:#fff;font-size:17px;font-weight:800}.halo-calc-total-copy output{display:block;margin:8px 0 9px;background:linear-gradient(135deg,#fff1ba,#d7a948);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:var(--font-display);font-size:clamp(44px,5vw,72px);font-weight:800;letter-spacing:-.055em;line-height:.98}.halo-calc-total-copy small{color:#bdb8ba;font-size:11px}.halo-calc-total-copy small strong{color:#f3d993}
+body.business-page.business-final-luxury-v1 .halo-calc-breakdown{padding:8px 15px;border:1px solid rgba(255,255,255,.10);border-radius:16px;background:rgba(255,255,255,.055);backdrop-filter:blur(8px)}
+body.business-page.business-final-luxury-v1 .halo-calc-breakdown>div{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.11)}.halo-calc-breakdown>div:last-child{border-bottom:0}.halo-calc-breakdown>div>span{display:grid;grid-template-columns:28px 1fr;align-items:center;column-gap:9px}.halo-calc-breakdown i{grid-row:1/3;display:grid;width:28px;height:28px;place-items:center;border-radius:50%;background:#e31c25;color:#fff;font-size:10px;font-style:normal;font-weight:800}.halo-calc-breakdown b{font-size:11.5px}.halo-calc-breakdown small{color:#9f999c;font-size:9.5px}.halo-calc-breakdown>div>strong{color:#fff;font-size:13px;white-space:nowrap}
+body.business-page.business-final-luxury-v1 .halo-calc-total-bar{display:flex;align-items:center;justify-content:space-between;margin-top:14px;padding:14px 15px;border:1px solid rgba(226,184,94,.30);border-radius:13px;background:linear-gradient(90deg,rgba(226,184,94,.08),rgba(255,255,255,.035));color:#e5bf6d;font-size:12px;font-weight:800;text-transform:uppercase}.halo-calc-total-bar strong{font-size:24px}
+body.business-page.business-final-luxury-v1 .halo-calc-achievement{text-align:center}.halo-achievement-kicker{color:#6f686b;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.halo-achievement-medal{display:grid;width:72px;height:72px;margin:22px auto 13px;place-items:center;border-radius:24px;background:linear-gradient(145deg,#ff8289,#d9111c);box-shadow:0 14px 28px rgba(227,28,37,.22),inset 0 1px 0 rgba(255,255,255,.45);color:#fff;font-size:30px}.halo-calc-achievement h3{color:#e31c25;font-size:19px}.halo-calc-achievement>p{min-height:48px;color:#645f62;font-size:11px;line-height:1.5}.halo-achievement-progress-copy{margin-top:19px;text-align:left}.halo-achievement-progress-copy strong{display:block;color:#e31c25;font-size:14px}.halo-achievement-progress-copy small{color:#716b6e;font-size:10px}.halo-achievement-progress{height:7px;margin:9px 0 20px;overflow:hidden;border-radius:999px;background:#e9e6e7}.halo-achievement-progress i{display:block;width:25%;height:100%;border-radius:inherit;background:linear-gradient(90deg,#e31c25,#ff555d);transition:width .45s ease}.halo-achievement-levels{display:grid;gap:6px;text-align:left}.halo-achievement-levels>div{display:flex;align-items:center;gap:9px;padding:8px;border:1px solid transparent;border-radius:11px}.halo-achievement-levels>div.is-current{border-color:rgba(227,28,37,.38);background:#fff9f9}.halo-achievement-levels i{display:grid;width:29px;height:29px;place-items:center;border-radius:9px;background:#f0eded;color:#aaa;font-style:normal}.halo-achievement-levels .is-current i{background:#ffe2e3;color:#e31c25}.halo-achievement-levels strong{display:block;font-size:10px}.halo-achievement-levels small{display:block;color:#8a8587;font-size:8.5px}
+body.business-page.business-final-luxury-v1 .halo-calc-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:16px;padding:18px 24px;border:1px solid rgba(227,28,37,.11);border-radius:20px;background:linear-gradient(90deg,#fff5f5,#fff);box-shadow:0 16px 40px rgba(60,20,24,.05)}.halo-calc-cta>div{display:flex;align-items:center;gap:13px}.halo-calc-cta>div:first-child>span{display:grid;width:42px;height:42px;place-items:center;border-radius:50%;background:#ffe7e8;color:#e31c25}.halo-calc-cta p{margin:0}.halo-calc-cta p strong,.halo-calc-cta p small{display:block}.halo-calc-cta p strong{font-size:14px}.halo-calc-cta p small{margin-top:3px;color:#777174;font-size:10.5px}.halo-calc-cta a{display:inline-flex;min-height:44px;align-items:center;justify-content:center;gap:22px;padding:0 22px;border:1px solid #e31c25;border-radius:10px;background:#e31c25;color:#fff;font-size:11.5px;font-weight:800}.halo-calc-cta a.halo-calc-cta-secondary{border-color:#bdb6b8;background:#fff;color:#2f2b2d}
+@media(max-width:1160px){body.business-page.business-final-luxury-v1 .halo-calc-layout{grid-template-columns:1fr 1.12fr}.halo-calc-achievement{grid-column:1/-1}.halo-achievement-levels{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:780px){body.business-page.business-final-luxury-v1 .halo-income-calculator{padding:58px 0}.halo-calc-layout{grid-template-columns:1fr!important}.halo-calc-achievement{grid-column:auto}.halo-calc-cta{align-items:stretch;flex-direction:column}.halo-calc-cta>div:last-child{display:grid;grid-template-columns:1fr 1fr}.halo-achievement-levels{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){body.business-page.business-final-luxury-v1 .halo-calc-controls,body.business-page.business-final-luxury-v1 .halo-calc-result,body.business-page.business-final-luxury-v1 .halo-calc-achievement{padding:18px;border-radius:20px}.halo-calc-presets{grid-template-columns:repeat(4,1fr)!important}.halo-calc-total-copy output{font-size:48px}.halo-calc-cta>div:last-child{grid-template-columns:1fr}.halo-achievement-levels{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.halo-achievement-progress i,.halo-calc-presets button,.halo-calc-switch>span,.halo-calc-switch>span i{transition:none!important}}
+
+
+/* ========================================================================
+   HaloGo Mixed-Plan Commission Calculator V2
+   ======================================================================== */
+.halo-calc-step--summary .halo-calc-label-row output { min-width: 64px; text-align: right; }
+.halo-sales-summary { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin-top:14px; }
+.halo-sales-summary span { display:grid; gap:2px; padding:10px 11px; border:1px solid rgba(227,28,37,.08); border-radius:14px; background:#fff8f8; }
+.halo-sales-summary strong { color:#e31c25; font-size:18px; }
+.halo-sales-summary small { color:#81797b; font-size:10px; }
+.halo-calc-step--plans .halo-calc-step-body, .halo-calc-step--mnp .halo-calc-step-body { min-width:0; }
+.halo-plan-quantity-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:13px; }
+.halo-plan-qty-row, .halo-mnp-row { display:flex; min-width:0; align-items:center; justify-content:space-between; gap:10px; padding:10px 11px; border:1px solid rgba(70,45,49,.09); border-radius:14px; background:linear-gradient(180deg,#fff,#fffafa); transition:border-color .2s ease,box-shadow .2s ease,background .2s ease; }
+.halo-plan-qty-row.is-active { border-color:rgba(227,28,37,.34); background:#fff7f7; box-shadow:0 8px 18px rgba(151,24,31,.07); }
+.halo-plan-qty-row > span:first-child, .halo-mnp-row > span:first-child { display:grid; min-width:0; gap:1px; }
+.halo-plan-qty-row strong, .halo-mnp-row strong { overflow:hidden; color:#211d1e; font-size:12px; text-overflow:ellipsis; white-space:nowrap; }
+.halo-plan-qty-row small, .halo-mnp-row small { color:#8a8284; font-size:9.5px; }
+.halo-stepper { display:grid; flex:0 0 auto; grid-template-columns:28px 42px 28px; overflow:hidden; border:1px solid rgba(227,28,37,.22); border-radius:10px; background:#fff; }
+.halo-stepper button { display:grid; width:28px; height:32px; place-items:center; border:0; background:#fff7f7; color:#d4141e; font:700 16px/1 inherit; cursor:pointer; }
+.halo-stepper button:hover, .halo-stepper button:focus-visible { background:#e31c25; color:#fff; }
+.halo-stepper input { width:42px; height:32px; padding:0 2px; border:0; outline:0; background:#fff; color:#201b1c; font:700 12px/1 inherit; text-align:center; -moz-appearance:textfield; }
+.halo-stepper input::-webkit-inner-spin-button, .halo-stepper input::-webkit-outer-spin-button { margin:0; -webkit-appearance:none; }
+.halo-mnp-grid { display:grid; gap:7px; margin-top:13px; }
+.halo-mnp-row { padding:9px 10px; background:#fbfafb; }
+.halo-mnp-empty { margin:12px 0 0; padding:10px 12px; border-radius:12px; background:#f8f5f5; color:#827a7c; font-size:11px; line-height:1.5; }
+.halo-calc-mini-note strong { color:#e31c25; }
+@media (max-width:1180px){.halo-plan-quantity-grid{grid-template-columns:1fr}.halo-calc-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr)}.halo-calc-achievement{grid-column:1/-1}}
+@media (max-width:760px){.halo-sales-summary{grid-template-columns:1fr 1fr}.halo-sales-summary span:last-child{grid-column:1/-1}.halo-plan-qty-row,.halo-mnp-row{padding:10px}.halo-stepper{grid-template-columns:30px 44px 30px}.halo-stepper button{width:30px}.halo-stepper input{width:44px}}
+
+/* ========================================================================
+   Mixed-plan calculator refinement V2
+   - Full plan names remain readable
+   - One overall MNP quantity input
+   ======================================================================== */
+body.business-page.business-final-luxury-v1 .halo-plan-qty-row {
+  display: grid;
+  grid-template-columns: minmax(118px, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 66px;
+  padding: 11px 12px;
+}
+
+body.business-page.business-final-luxury-v1 .halo-plan-qty-row > span:first-child {
+  min-width: 0;
+  overflow: visible;
+}
+
+body.business-page.business-final-luxury-v1 .halo-plan-qty-row strong {
+  display: block;
+  overflow: visible;
+  font-size: 12.5px;
+  line-height: 1.25;
+  text-overflow: clip;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+body.business-page.business-final-luxury-v1 .halo-plan-qty-row small {
+  margin-top: 3px;
+  font-size: 10px;
+}
+
+body.business-page.business-final-luxury-v1 .halo-plan-qty-row .halo-stepper {
+  grid-template-columns: 26px 38px 26px;
+}
+
+body.business-page.business-final-luxury-v1 .halo-plan-qty-row .halo-stepper button {
+  width: 26px;
+}
+
+body.business-page.business-final-luxury-v1 .halo-plan-qty-row .halo-stepper input {
+  width: 38px;
+}
+
+body.business-page.business-final-luxury-v1 .halo-calc-mnp-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px 16px;
+  align-items: center;
+}
+
+body.business-page.business-final-luxury-v1 .halo-calc-mnp-copy {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+}
+
+body.business-page.business-final-luxury-v1 .halo-mnp-total-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+body.business-page.business-final-luxury-v1 .halo-mnp-total-control > strong {
+  color: #5f5659;
+  font-size: 11px;
+  letter-spacing: .04em;
+}
+
+body.business-page.business-final-luxury-v1 .halo-stepper--mnp-total {
+  grid-template-columns: 32px 50px 32px;
+  border-radius: 12px;
+}
+
+body.business-page.business-final-luxury-v1 .halo-stepper--mnp-total button {
+  width: 32px;
+  height: 38px;
+}
+
+body.business-page.business-final-luxury-v1 .halo-stepper--mnp-total input {
+  width: 50px;
+  height: 38px;
+  font-size: 13px;
+}
+
+body.business-page.business-final-luxury-v1 .halo-stepper button:disabled,
+body.business-page.business-final-luxury-v1 .halo-stepper input:disabled {
+  cursor: not-allowed;
+  opacity: .46;
+}
+
+body.business-page.business-final-luxury-v1 .halo-mnp-limit {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #8a7e81;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+@media (min-width: 1181px) {
+  body.business-page.business-final-luxury-v1 .halo-plan-quantity-grid {
+    grid-template-columns: repeat(2, minmax(230px, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  body.business-page.business-final-luxury-v1 .halo-plan-qty-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-height: 62px;
+  }
+
+  body.business-page.business-final-luxury-v1 .halo-calc-mnp-body {
+    grid-template-columns: 1fr;
+  }
+
+  body.business-page.business-final-luxury-v1 .halo-mnp-total-control {
+    justify-content: flex-start;
+  }
+}
+
+/* ========================================================================
+   Mixed-plan calculator layout fix V3
+   - Gives the plan controls enough desktop width for two complete columns
+   - Prevents the second plan column from sliding beneath the result panel
+   - Keeps the existing stacked responsive treatment on smaller screens
+   ======================================================================== */
+body.business-page.business-final-luxury-v1 .halo-calc-wrap {
+  max-width: 1480px;
+}
+
+body.business-page.business-final-luxury-v1 .halo-calc-layout--balanced {
+  grid-template-columns:
+    minmax(480px, .98fr)
+    minmax(520px, 1.14fr)
+    minmax(230px, .52fr);
+  gap: 18px;
+}
+
+body.business-page.business-final-luxury-v1 .halo-calc-controls--wide,
+body.business-page.business-final-luxury-v1 .halo-calc-layout--balanced > * {
+  min-width: 0;
+}
+
+body.business-page.business-final-luxury-v1 .halo-calc-controls--wide {
+  overflow: hidden;
+}
+
+body.business-page.business-final-luxury-v1 .halo-calc-controls--wide .halo-calc-step-body,
+body.business-page.business-final-luxury-v1 .halo-calc-controls--wide .halo-plan-quantity-grid {
+  width: 100%;
+  min-width: 0;
+}
+
+@media (min-width: 1281px) {
+  body.business-page.business-final-luxury-v1 .halo-calc-controls--wide .halo-plan-quantity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.business-page.business-final-luxury-v1 .halo-calc-controls--wide .halo-plan-qty-row {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+}
+
+@media (max-width: 1280px) {
+  body.business-page.business-final-luxury-v1 .halo-calc-layout--balanced {
+    grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  }
+
+  body.business-page.business-final-luxury-v1 .halo-calc-layout--balanced .halo-calc-achievement {
+    grid-column: 1 / -1;
+  }
+
+  body.business-page.business-final-luxury-v1 .halo-calc-controls--wide .halo-plan-quantity-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 820px) {
+  body.business-page.business-final-luxury-v1 .halo-calc-layout--balanced {
+    grid-template-columns: 1fr;
+  }
+
+  body.business-page.business-final-luxury-v1 .halo-calc-layout--balanced .halo-calc-achievement {
+    grid-column: auto;
+  }
+}
+
+
+/* ========================================================================
+   HaloGo Partner — Compact Signature Commission Calculator V3
+   ======================================================================== */
+body.business-page.business-final-luxury-v1 .halo-income-calculator--compact{padding:62px 0 66px;background:radial-gradient(circle at 8% 8%,rgba(227,28,37,.045),transparent 25%),linear-gradient(180deg,#fff,#fbf9f8)}
+body.business-page.business-final-luxury-v1 .halo-income-calculator--compact .halo-calc-wrap{max-width:1460px}
+body.business-page.business-final-luxury-v1 .halo-income-calculator--compact .halo-calc-head{margin-bottom:26px}
+body.business-page.business-final-luxury-v1 .halo-income-calculator--compact .halo-calc-head h2{font-size:clamp(34px,3.4vw,52px)}
+body.business-page.business-final-luxury-v1 .halo-calc-layout--compact{display:grid;grid-template-columns:minmax(410px,.98fr) minmax(400px,.86fr) minmax(320px,.72fr);gap:16px;align-items:stretch}
+body.business-page.business-final-luxury-v1 .halo-calc-controls--compact,body.business-page.business-final-luxury-v1 .halo-calc-achievement--compact{padding:22px;border:1px solid rgba(32,24,26,.09);border-radius:22px;background:rgba(255,255,255,.97);box-shadow:0 18px 46px rgba(43,20,23,.07)}
+body.business-page.business-final-luxury-v1 .halo-compact-panel-head{display:flex;gap:11px;align-items:center;margin-bottom:16px}
+body.business-page.business-final-luxury-v1 .halo-compact-panel-head>span{display:grid;width:30px;height:30px;place-items:center;border-radius:50%;background:#e31c25;color:#fff;font-size:11px;font-weight:800}
+body.business-page.business-final-luxury-v1 .halo-compact-panel-head strong{display:block;font-size:14px}.halo-compact-panel-head small{display:block;margin-top:2px;color:#827b7e;font-size:10.5px}
+body.business-page.business-final-luxury-v1 .halo-plan-quantity-grid--compact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+body.business-page.business-final-luxury-v1 .halo-plan-quantity-grid--compact .halo-plan-qty-row{min-height:64px;padding:10px 11px;border-radius:13px;grid-template-columns:minmax(0,1fr) auto}
+body.business-page.business-final-luxury-v1 .halo-plan-quantity-grid--compact .halo-plan-qty-row>span:first-child{min-width:0}
+body.business-page.business-final-luxury-v1 .halo-plan-quantity-grid--compact .halo-plan-qty-row strong{font-size:11.5px;white-space:normal;line-height:1.2}
+body.business-page.business-final-luxury-v1 .halo-plan-quantity-grid--compact .halo-plan-qty-row small{font-size:9.5px}
+body.business-page.business-final-luxury-v1 .halo-plan-quantity-grid--compact .halo-stepper{grid-template-columns:28px 34px 28px;height:34px}
+body.business-page.business-final-luxury-v1 .halo-plan-quantity-grid--compact .halo-stepper button{width:28px}.halo-plan-quantity-grid--compact .halo-stepper input{width:34px;font-size:11px}
+body.business-page.business-final-luxury-v1 .halo-compact-summary-row,body.business-page.business-final-luxury-v1 .halo-compact-mnp-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;padding:13px 14px;border:1px solid #ece7e7;border-radius:14px;background:#fff}
+body.business-page.business-final-luxury-v1 .halo-compact-summary-row span,body.business-page.business-final-luxury-v1 .halo-compact-mnp-row strong{font-size:11.5px}.halo-compact-summary-row strong{color:#e31c25;font-size:14px}
+body.business-page.business-final-luxury-v1 .halo-compact-mnp-row small{display:block;color:#8b8588;font-size:9.5px}
+body.business-page.business-final-luxury-v1 .halo-compact-mnp-row .halo-stepper{grid-template-columns:30px 42px 30px;height:36px}
+body.business-page.business-final-luxury-v1 .halo-mnp-limit{margin:7px 3px 0;font-size:9px;color:#948e90}
+body.business-page.business-final-luxury-v1 .halo-calc-result--compact{display:flex;min-height:100%;flex-direction:column;padding:24px;border-radius:22px;background:radial-gradient(circle at 84% 8%,rgba(227,28,37,.22),transparent 30%),linear-gradient(145deg,#0b0d0f,#161719 58%,#24090c);box-shadow:0 22px 56px rgba(14,7,9,.22)}
+body.business-page.business-final-luxury-v1 .halo-calc-result--compact .halo-calc-result-head{margin-bottom:10px}.halo-calc-result--compact .halo-calc-result-head span{font-size:10px}.halo-calc-result--compact .halo-calc-result-head strong{font-size:10px;color:#eac86d}
+body.business-page.business-final-luxury-v1 .halo-calc-result--compact .halo-calc-total-copy{padding:7px 0 15px}.halo-calc-result--compact .halo-calc-total-copy output{font-size:clamp(45px,5vw,72px);line-height:.95;color:#f2d27b;text-shadow:0 10px 24px rgba(230,184,94,.16)}
+body.business-page.business-final-luxury-v1 .halo-calc-result--compact .halo-calc-total-copy small{margin-top:12px;font-size:10px}
+body.business-page.business-final-luxury-v1 .halo-calc-breakdown--compact{margin-top:4px;padding-top:9px;border-top:1px solid rgba(255,255,255,.10)}
+body.business-page.business-final-luxury-v1 .halo-calc-breakdown--compact>div{min-height:42px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+body.business-page.business-final-luxury-v1 .halo-calc-breakdown--compact span{gap:9px}.halo-calc-breakdown--compact i{width:24px;height:24px;font-size:9px}.halo-calc-breakdown--compact b{font-size:11.5px}.halo-calc-breakdown--compact>div>strong{font-size:11.5px}
+body.business-page.business-final-luxury-v1 .halo-calc-result--compact .halo-calc-total-bar{margin-top:auto;min-height:50px;padding:11px 13px}.halo-calc-result--compact .halo-calc-total-bar span{font-size:10px}.halo-calc-result--compact .halo-calc-total-bar strong{font-size:20px}
+body.business-page.business-final-luxury-v1 .halo-compact-disclaimer{margin:9px 2px 0;color:rgba(255,255,255,.55);font-size:8.7px;line-height:1.45}
+body.business-page.business-final-luxury-v1 .halo-calc-achievement--compact{text-align:center}
+body.business-page.business-final-luxury-v1 .halo-calc-achievement--compact .halo-achievement-kicker{font-size:10px;letter-spacing:.11em}
+body.business-page.business-final-luxury-v1 .halo-rank-badge{width:138px;height:138px;object-fit:contain;margin:8px auto 3px;filter:drop-shadow(0 16px 18px rgba(27,20,22,.18));transition:transform .35s ease,filter .35s ease}
+body.business-page.business-final-luxury-v1 .halo-rank-badge:hover{transform:translateY(-3px) rotate(2deg);filter:drop-shadow(0 20px 24px rgba(27,20,22,.23))}
+body.business-page.business-final-luxury-v1 .halo-calc-achievement--compact h3{font-size:22px}.halo-calc-achievement--compact>p{min-height:34px;margin:7px auto 12px;font-size:10.5px;line-height:1.45;color:#777174}
+body.business-page.business-final-luxury-v1 .halo-calc-achievement--compact .halo-achievement-progress-copy{display:flex;align-items:center;justify-content:space-between}.halo-calc-achievement--compact .halo-achievement-progress-copy strong{font-size:12px;color:#e31c25}.halo-calc-achievement--compact .halo-achievement-progress-copy small{font-size:10px;color:#4b4648}
+body.business-page.business-final-luxury-v1 .halo-calc-achievement--compact .halo-achievement-progress{height:8px;margin:8px 0 9px}.halo-next-rank-copy{min-height:auto!important;margin:0 0 13px!important;color:#b47d25!important;font-weight:700}
+body.business-page.business-final-luxury-v1 .halo-achievement-levels--compact{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:7px}
+body.business-page.business-final-luxury-v1 .halo-achievement-levels--compact>div{display:flex;min-width:0;flex-direction:column;gap:2px;align-items:center;padding:7px 3px;border:0;background:transparent;opacity:.48}
+body.business-page.business-final-luxury-v1 .halo-achievement-levels--compact>div.is-current{opacity:1}.halo-achievement-levels--compact img{width:42px;height:42px;object-fit:contain}.halo-achievement-levels--compact strong{font-size:9px}.halo-achievement-levels--compact small{font-size:8px;color:#8b8588}
+@media(max-width:1280px){body.business-page.business-final-luxury-v1 .halo-calc-layout--compact{grid-template-columns:1fr 1fr}.halo-calc-achievement--compact{grid-column:1/-1}.halo-calc-achievement--compact{display:grid;grid-template-columns:150px 1fr;align-items:center;text-align:left}.halo-calc-achievement--compact .halo-rank-badge{grid-row:1/7}.halo-achievement-levels--compact{grid-column:2}.halo-calc-achievement--compact .halo-achievement-kicker,.halo-calc-achievement--compact h3,.halo-calc-achievement--compact>p,.halo-calc-achievement--compact .halo-achievement-progress-copy,.halo-calc-achievement--compact .halo-achievement-progress,.halo-calc-achievement--compact .halo-next-rank-copy{grid-column:2}}
+@media(max-width:820px){body.business-page.business-final-luxury-v1 .halo-calc-layout--compact{grid-template-columns:1fr}.halo-calc-achievement--compact{grid-column:auto;display:block;text-align:center}.halo-calc-achievement--compact .halo-rank-badge{grid-row:auto}.halo-achievement-levels--compact{grid-column:auto}}
+@media(max-width:520px){body.business-page.business-final-luxury-v1 .halo-income-calculator--compact{padding:52px 0}.halo-plan-quantity-grid--compact{grid-template-columns:1fr!important}.halo-calc-controls--compact,.halo-calc-result--compact,.halo-calc-achievement--compact{padding:18px}.halo-rank-badge{width:118px;height:118px}}
+@media(prefers-reduced-motion:reduce){.halo-rank-badge{transition:none!important}.halo-rank-badge:hover{transform:none!important}}
+
+/* ========================================================================
+   HaloGo Partner — Luxury Polish V3
+   Unified editorial rhythm, premium surfaces and restrained motion.
+   ======================================================================== */
+body.business-page.business-luxury-v3 {
+  --v3-ink: #171518;
+  --v3-muted: #70686c;
+  --v3-red: #e31c25;
+  --v3-red-dark: #a80e16;
+  --v3-gold: #d6a64f;
+  --v3-line: rgba(63, 35, 40, .095);
+  --v3-radius-lg: 30px;
+  --v3-radius-md: 22px;
+  --v3-shadow: 0 24px 68px rgba(57, 24, 29, .09);
+  --v3-shadow-hover: 0 34px 82px rgba(83, 20, 28, .14);
+  background: #fff;
+}
+
+body.business-page.business-luxury-v3 .luxury-v3-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+body.business-page.business-luxury-v3 .luxury-v3-section > .wrap {
+  position: relative;
+  z-index: 2;
+}
+
+body.business-page.business-luxury-v3 .luxury-v3-section::before {
+  position: absolute;
+  z-index: 0;
+  top: 42px;
+  left: max(24px, calc((100vw - 1380px) / 2));
+  content: attr(data-v3-section);
+  color: rgba(96, 57, 63, .06);
+  font: 800 clamp(64px, 7vw, 110px)/1 var(--font-display);
+  letter-spacing: -.08em;
+  pointer-events: none;
+}
+
+body.business-page.business-luxury-v3 .luxury-v3-section::after {
+  right: max(26px, calc((100vw - 1240px) / 2)) !important;
+  left: max(26px, calc((100vw - 1240px) / 2)) !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, transparent, rgba(111,74,80,.11) 16%, rgba(227,28,37,.16) 50%, rgba(111,74,80,.11) 84%, transparent) !important;
+  box-shadow: 0 0 16px rgba(227,28,37,.05);
+}
+
+body.business-page.business-luxury-v3 .luxury-v3-section--light {
+  background:
+    radial-gradient(circle at 90% 12%, rgba(227,28,37,.04), transparent 24%),
+    radial-gradient(circle at 8% 84%, rgba(211,165,80,.045), transparent 24%),
+    linear-gradient(180deg, #fff 0%, #fcfbfa 100%) !important;
+}
+
+body.business-page.business-luxury-v3 .luxury-v3-section--warm {
+  background:
+    radial-gradient(circle at 88% 14%, rgba(227,28,37,.045), transparent 24%),
+    radial-gradient(circle at 7% 88%, rgba(211,165,80,.07), transparent 26%),
+    linear-gradient(180deg, #f8f5f1 0%, #f4efea 100%) !important;
+}
+
+body.business-page.business-luxury-v3 .luxury-v3-section--signature {
+  background:
+    radial-gradient(circle at 9% 12%, rgba(227,28,37,.07), transparent 24%),
+    radial-gradient(circle at 91% 82%, rgba(211,165,80,.07), transparent 22%),
+    linear-gradient(180deg, #fbf9f8 0%, #f5f1ee 100%) !important;
+}
+
+body.business-page.business-luxury-v3 .v3-ambient-orb {
+  position: absolute;
+  z-index: 1;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  opacity: .32;
+  pointer-events: none;
+  filter: blur(58px);
+  transform: translate3d(0, var(--v3-orb-shift, 0), 0);
+  transition: transform .2s linear;
+}
+body.business-page.business-luxury-v3 .v3-ambient-orb--red { right: -180px; top: 8%; background: rgba(227,28,37,.15); }
+body.business-page.business-luxury-v3 .v3-ambient-orb--gold { left: -190px; bottom: 4%; background: rgba(214,166,79,.16); }
+
+body.business-page.business-luxury-v3 .biz-section-head,
+body.business-page.business-luxury-v3 .halogo-steps-header {
+  margin-bottom: 48px;
+}
+
+body.business-page.business-luxury-v3 .biz-section-head .eyebrow,
+body.business-page.business-luxury-v3 .halogo-steps-eyebrow {
+  min-height: 30px;
+  padding: 7px 13px;
+  border: 1px solid rgba(227,28,37,.12);
+  border-radius: 999px;
+  background: rgba(255,255,255,.62);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.88);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+body.business-page.business-luxury-v3 .biz-section-head h2,
+body.business-page.business-luxury-v3 .halogo-steps-header h2 {
+  margin-top: 17px;
+  color: var(--v3-ink);
+  text-wrap: balance;
+}
+
+body.business-page.business-luxury-v3 .biz-section-head > p,
+body.business-page.business-luxury-v3 .halogo-steps-header > p {
+  color: var(--v3-muted);
+  text-wrap: balance;
+}
+
+/* Unified premium surfaces */
+body.business-page.business-luxury-v3 :is(
+  .biz-overview-luxe-card,
+  .biz-income-card,
+  .biz-registration-stage,
+  .biz-sales-story,
+  .halo-calc-controls,
+  .halo-calc-result,
+  .halo-calc-achievement,
+  .biz-toolkit-panel,
+  .biz-milestone-shell
+) {
+  border-color: rgba(66,36,41,.095);
+  border-radius: var(--v3-radius-lg);
+  box-shadow: var(--v3-shadow);
+}
+
+body.business-page.business-luxury-v3 :is(
+  .biz-overview-luxe-card,
+  .biz-income-card,
+  .biz-sales-story,
+  .biz-toolkit-item,
+  .biz-milestone-tab
+) {
+  transition: transform .42s cubic-bezier(.2,.8,.2,1), box-shadow .42s ease, border-color .42s ease, background .42s ease;
+}
+
+@media (hover:hover) {
+  body.business-page.business-luxury-v3 :is(
+    .biz-overview-luxe-card,
+    .biz-income-card,
+    .biz-sales-story
+  ):hover {
+    transform: translateY(-7px);
+    border-color: rgba(227,28,37,.16);
+    box-shadow: var(--v3-shadow-hover);
+  }
+}
+
+/* Overview */
+body.business-page.business-luxury-v3 .biz-overview-luxe-grid { gap: 18px; }
+body.business-page.business-luxury-v3 .biz-overview-luxe-card { overflow: hidden; }
+body.business-page.business-luxury-v3 .biz-overview-luxe-card::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255,255,255,.18), transparent 38%);
+}
+body.business-page.business-luxury-v3 .biz-overview-luxe-cta {
+  border-radius: var(--v3-radius-md);
+  background: rgba(255,255,255,.78);
+  box-shadow: 0 20px 54px rgba(57,24,29,.08);
+}
+
+/* Income journey */
+body.business-page.business-luxury-v3 .biz-income-journey {
+  padding: 22px;
+  border: 1px solid rgba(68,38,43,.075);
+  border-radius: 34px;
+  background: rgba(255,255,255,.56);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+body.business-page.business-luxury-v3 .biz-income-card { min-height: 370px; }
+body.business-page.business-luxury-v3 .biz-income-item--featured .biz-income-card {
+  box-shadow: 0 28px 64px rgba(125,18,29,.20);
+}
+
+/* Registration */
+body.business-page.business-luxury-v3 .biz-registration-tabs {
+  padding: 9px;
+  border: 1px solid rgba(68,38,43,.08);
+  border-radius: 24px;
+  background: rgba(255,255,255,.66);
+  box-shadow: 0 16px 44px rgba(57,24,29,.07);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+body.business-page.business-luxury-v3 .biz-registration-stage { overflow: hidden; }
+body.business-page.business-luxury-v3 .biz-registration-phone-shell {
+  border-color: rgba(255,255,255,.18);
+  box-shadow: 0 30px 68px rgba(18,3,6,.32);
+}
+
+/* Sales editorial */
+body.business-page.business-luxury-v3 .biz-sales-editorial-shell { gap: 20px; }
+body.business-page.business-luxury-v3 .biz-sales-story {
+  overflow: hidden;
+  background: rgba(255,255,255,.82);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+body.business-page.business-luxury-v3 .biz-sales-stage { border-radius: 24px; }
+body.business-page.business-luxury-v3 .biz-sales-channel-list button {
+  border-radius: 999px;
+}
+
+/* Signature calculator */
+body.business-page.business-luxury-v3 .halo-income-calculator--compact {
+  padding-top: 82px;
+  padding-bottom: 82px;
+}
+body.business-page.business-luxury-v3 .halo-calc-layout--compact { gap: 18px; }
+body.business-page.business-luxury-v3 .halo-calc-controls--compact,
+body.business-page.business-luxury-v3 .halo-calc-achievement--compact {
+  background: rgba(255,255,255,.88);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+body.business-page.business-luxury-v3 .halo-calc-result--compact {
+  border-color: rgba(230,185,96,.25);
+  background:
+    radial-gradient(circle at 86% 12%, rgba(227,28,37,.26), transparent 29%),
+    linear-gradient(150deg,#090a0d 0%,#151013 58%,#2b090d 100%);
+  box-shadow: 0 34px 80px rgba(28,6,9,.28);
+}
+body.business-page.business-luxury-v3 .halo-plan-qty-row {
+  border-color: rgba(64,37,41,.08);
+  background: rgba(255,255,255,.82);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.92);
+}
+body.business-page.business-luxury-v3 .halo-plan-qty-row.is-active {
+  border-color: rgba(227,28,37,.35);
+  background: linear-gradient(135deg,#fff7f7,#fff);
+  box-shadow: 0 10px 26px rgba(227,28,37,.09), inset 0 1px 0 #fff;
+}
+body.business-page.business-luxury-v3 .halo-achievement-medal--image {
+  filter: drop-shadow(0 18px 24px rgba(20,12,14,.18));
+  transition: transform .55s cubic-bezier(.2,.8,.2,1), filter .45s ease;
+}
+@media (hover:hover) {
+  body.business-page.business-luxury-v3 .halo-calc-achievement:hover .halo-achievement-medal--image {
+    transform: translateY(-4px) rotate(2deg) scale(1.025);
+    filter: drop-shadow(0 24px 32px rgba(20,12,14,.24));
+  }
+}
+
+/* Toolkit */
+body.business-page.business-luxury-v3 .biz-toolkit-panel {
+  overflow: hidden;
+  padding: 12px;
+  background: rgba(255,255,255,.74);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+body.business-page.business-luxury-v3 .biz-toolkit-item {
+  border-radius: 20px;
+  background: rgba(255,255,255,.72);
+}
+body.business-page.business-luxury-v3 .biz-toolkit-item:hover,
+body.business-page.business-luxury-v3 .biz-toolkit-item:focus-visible {
+  background: linear-gradient(145deg,#fff,#fff6f6);
+  box-shadow: 0 16px 36px rgba(96,18,25,.09);
+  transform: translateY(-4px);
+}
+
+/* Rewards */
+body.business-page.business-luxury-v3 .biz-milestone-shell {
+  overflow: hidden;
+  background: rgba(255,255,255,.86);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+body.business-page.business-luxury-v3 .biz-milestone-tab.is-active {
+  background: linear-gradient(145deg,#fff7f7,#fff);
+}
+
+/* Final CTA */
+body.business-page.business-luxury-v3 .luxury-v3-final-cta {
+  position: relative;
+  overflow: hidden;
+  padding-top: 92px;
+  padding-bottom: 92px;
+  background:
+    radial-gradient(circle at 82% 16%, rgba(255,101,111,.22), transparent 28%),
+    radial-gradient(circle at 8% 95%, rgba(214,166,79,.11), transparent 25%),
+    linear-gradient(130deg,#180406 0%,#4c0910 50%,#97121b 100%);
+}
+body.business-page.business-luxury-v3 .luxury-v3-final-cta::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  opacity: .18;
+  background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size: 58px 58px;
+  -webkit-mask-image: radial-gradient(circle at center,#000,transparent 72%);
+  mask-image: radial-gradient(circle at center,#000,transparent 72%);
+}
+body.business-page.business-luxury-v3 .luxury-v3-final-cta .cta-luxe-banner {
+  border-radius: 34px;
+  box-shadow: 0 40px 100px rgba(19,0,3,.35), inset 0 1px 0 rgba(255,255,255,.14);
+}
+
+/* V3 reveal */
+body.business-page.business-luxury-v3.biz-luxury-motion-ready .v3-reveal {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(22px) scale(.992);
+  transition: opacity .72s ease var(--v3-delay,0ms), filter .72s ease var(--v3-delay,0ms), transform .82s cubic-bezier(.2,.8,.2,1) var(--v3-delay,0ms);
+}
+body.business-page.business-luxury-v3.biz-luxury-motion-ready .v3-reveal.is-v3-visible {
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+
+@media (max-width: 980px) {
+  body.business-page.business-luxury-v3 .luxury-v3-section::before { top: 28px; font-size: 70px; }
+  body.business-page.business-luxury-v3 .biz-income-journey { padding: 15px; border-radius: 28px; }
+}
+
+@media (max-width: 620px) {
+  body.business-page.business-luxury-v3 .luxury-v3-section::before { display: none; }
+  body.business-page.business-luxury-v3 .v3-ambient-orb { display: none; }
+  body.business-page.business-luxury-v3 .biz-section-head,
+  body.business-page.business-luxury-v3 .halogo-steps-header { margin-bottom: 34px; }
+  body.business-page.business-luxury-v3 :is(.biz-overview-luxe-card,.biz-income-card,.biz-registration-stage,.biz-sales-story,.halo-calc-controls,.halo-calc-result,.halo-calc-achievement,.biz-toolkit-panel,.biz-milestone-shell) { border-radius: 22px; }
+  body.business-page.business-luxury-v3 .luxury-v3-final-cta { padding-top: 70px; padding-bottom: 70px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.business-page.business-luxury-v3 .v3-reveal,
+  body.business-page.business-luxury-v3 .v3-ambient-orb,
+  body.business-page.business-luxury-v3 .halo-achievement-medal--image { transition: none !important; transform: none !important; }
+  body.business-page.business-luxury-v3.biz-luxury-motion-ready .v3-reveal { opacity: 1; filter: none; }
+}
+/* =========================================================
+   CARA JUAL SIMKAD — REMOVE TEXT CARD BACKGROUND
+========================================================= */
+
+body.business-page.business-final-luxury-v1
+.biz-sales-story {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+body.business-page.business-final-luxury-v1
+.biz-sales-copy {
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Kekalkan sedikit jarak untuk bahagian offline */
+body.business-page.business-final-luxury-v1
+.biz-sales-story--offline .biz-sales-copy {
+  padding-left: 24px !important;
+}
+
+@media (max-width: 980px) {
+  body.business-page.business-final-luxury-v1
+  .biz-sales-story--offline .biz-sales-copy {
+    padding-left: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   UNIFIED EDITORIAL NUMBER SYSTEM — INDEX + BUSINESS
+   Keeps the large chapter numbers visually consistent across both pages.
+   ========================================================================== */
+
+@media (min-width: 1280px) {
+  body.business-page.business-luxury-v3 .luxury-v3-section::before {
+    z-index: 3;
+    top: 108px;
+    left: max(24px, calc((100vw - var(--container)) / 2 - 104px));
+    width: 72px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid transparent;
+    content: attr(data-v3-section);
+    color: rgba(50, 25, 29, .082);
+    font-family: var(--font-display);
+    font-size: clamp(58px, 5.4vw, 86px);
+    font-weight: 800;
+    line-height: .82;
+    letter-spacing: -.075em;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(227, 28, 37, .72),
+        rgba(211, 164, 78, .24),
+        transparent
+      ) left bottom / 48px 1px no-repeat;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+/* Match the index treatment: editorial numbers stay desktop-only. */
+@media (max-width: 1279px) {
+  body.business-page.business-luxury-v3 .luxury-v3-section::before {
+    display: none;
+  }
+}
