@@ -597,8 +597,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 .motion-hero h1 span {
-  display: block;
-  color: #ffb7bb;
+  color: #efcd89;
+  text-shadow: 0 12px 34px rgba(239, 205, 137, .11);
 }
 
 .motion-hero-copy > p {
