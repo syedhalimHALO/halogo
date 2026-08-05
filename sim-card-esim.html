@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-
 <html lang="ms">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Bantuan — Simkad &amp; eSIM | HaloGo Partner</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-
-<meta content="Pusat bantuan HaloGo Partner untuk soalan simkad fizikal, eSIM, pengaktifan, pertukaran peranti dan penyelesaian masalah asas." name="description"/><meta content="#230508" name="theme-color"/><link href="css/style-amended.css" rel="stylesheet"/><script defer="True" src="js/script.js"></script><script defer="True" src="js/help-centre.js"></script></head>
-<body class="has-floating-assistant help-page">
-<!-- ============ HEADER ============ -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#230508">
+<meta name="description" content="Pusat bantuan premium HaloGo Partner untuk simkad fizikal, eSIM, pengaktifan dan penyelesaian masalah asas.">
+<link rel="icon" href="data:,">
+<title>Pusat Bantuan — Simkad &amp; eSIM | HaloGo Partner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="css/style-amended.css?v=faq-premium-v3-20260806" rel="stylesheet">
+<script defer src="js/script.js"></script>
+<script defer src="js/help-centre.js?v=faq-premium-v3-20260806"></script>
+</head>
+<body class="has-floating-assistant help-page faq-v2-page">
 <header class="site-header luxury-header">
 <div class="wrap luxury-header-inner">
 <a aria-label="HaloGo Partner — Halaman utama" class="brand luxury-brand" href="index.html">
@@ -28,37 +31,143 @@
 </div>
 <div aria-hidden="true" class="site-scroll-progress"><span></span></div>
 </header>
-<!-- ============ PAGE HERO ============ -->
-<main><section class="page-hero">
-<div class="wrap">
-<div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="sim-card-esim.html">Pusat Bantuan</a><span class="sep">/</span>Simkad &amp; eSIM</div>
-<div class="eyebrow">Pusat Bantuan</div>
-<h1>Simkad &amp; eSIM</h1>
-<p class="lead">Semua yang anda perlu tahu tentang simkad fizikal dan eSIM Halo Telco — dari pengaktifan sehingga penukaran peranti.</p>
-<div class="search-box">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
-<input id="faqSearch" placeholder="Cari soalan, cth: 'aktifkan eSIM'…" type="text"/>
-</div>
-</div>
-</section><section class="wrap help-layout">
-<!-- Sidebar categories -->
-<aside class="help-sidebar">
-<h5>Kategori Bantuan</h5>
-<div class="help-cat-list">
-<span class="help-cat disabled">Akaun</span>
-<a class="help-cat active" href="sim-card-esim.html">Simkad &amp; eSIM</a>
-<span class="help-cat disabled">Perkhidmatan Prabayar</span>
-<span class="help-cat disabled">Aplikasi Halo Telco</span>
-<span class="help-cat disabled">HaloGo Lifestyle Balance Transfer</span>
-<span class="help-cat disabled">Insurans &amp; Perbelanjaan Pengebumian</span>
-</div>
-</aside>
-<!-- FAQ content -->
-<div>
-<div class="faq-group">
+
+<main class="faq-v2-main">
+  <section class="faq-v2-hero faq-v3-hero" aria-labelledby="faq-v2-title">
+    <span class="faq-v2-hero-grid" aria-hidden="true"></span>
+    <span class="faq-v2-orb faq-v2-orb--one" aria-hidden="true"></span>
+    <span class="faq-v2-orb faq-v2-orb--two" aria-hidden="true"></span>
+    <span class="faq-v3-signal-line faq-v3-signal-line--one" aria-hidden="true"></span>
+    <span class="faq-v3-signal-line faq-v3-signal-line--two" aria-hidden="true"></span>
+
+    <div class="wrap faq-v3-hero-layout">
+      <div class="faq-v3-hero-copy">
+        <div class="faq-v2-breadcrumb"><a href="index.html">Home</a><span>/</span><span>Pusat Bantuan</span></div>
+        <div class="faq-v2-kicker"><span></span>Pusat Bantuan HaloGo</div>
+        <h1 id="faq-v2-title">Semua tentang<br><em>Simkad &amp; eSIM.</em></h1>
+        <p>Jawapan pantas untuk pengaktifan, kod QR, pertukaran peranti dan penyelesaian masalah asas Halo Telco.</p>
+
+        <label class="faq-v2-search faq-v3-search" for="faqSearch">
+          <span class="faq-v3-search-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg></span>
+          <input id="faqSearch" type="search" placeholder="Cari jawapan, contoh: aktifkan eSIM" autocomplete="off">
+          <kbd>⌘ K</kbd>
+        </label>
+
+        <div class="faq-v2-popular faq-v3-popular" aria-label="Carian popular">
+          <span>Popular:</span>
+          <button type="button" data-faq-query="eSIM">eSIM</button>
+          <button type="button" data-faq-query="kod QR">Kod QR</button>
+          <button type="button" data-faq-query="hilang">SIM hilang</button>
+          <button type="button" data-faq-query="rangkaian">Rangkaian</button>
+        </div>
+
+        <div class="faq-v2-stats faq-v3-stats">
+          <span><strong>9</strong> soalan utama</span>
+          <span><strong>3</strong> kategori</span>
+          <span><i></i>Sokongan WhatsApp</span>
+        </div>
+      </div>
+
+      <div class="faq-v3-visual" aria-label="Visual teknologi Simkad dan eSIM Halo Telco">
+        <span class="faq-v3-visual-glow" aria-hidden="true"></span>
+        <span class="faq-v3-ring faq-v3-ring--outer" aria-hidden="true"></span>
+        <span class="faq-v3-ring faq-v3-ring--middle" aria-hidden="true"></span>
+        <span class="faq-v3-ring faq-v3-ring--inner" aria-hidden="true"></span>
+        <span class="faq-v3-orbit-dot faq-v3-orbit-dot--one" aria-hidden="true"></span>
+        <span class="faq-v3-orbit-dot faq-v3-orbit-dot--two" aria-hidden="true"></span>
+        <span class="faq-v3-orbit-dot faq-v3-orbit-dot--three" aria-hidden="true"></span>
+
+        <div class="faq-v3-phone" aria-hidden="true">
+          <div class="faq-v3-phone-frame">
+            <div class="faq-v3-phone-island"></div>
+            <div class="faq-v3-phone-screen">
+              <div class="faq-v3-phone-status"><span>9:41</span><span>5G</span></div>
+              <div class="faq-v3-phone-brand"><span>HALO</span><small>eSIM ACTIVATION</small></div>
+              <div class="faq-v3-phone-chip">
+                <span class="faq-v3-chip-grid"></span>
+                <strong>eSIM</strong>
+                <small>Ready to connect</small>
+              </div>
+              <div class="faq-v3-activation-progress"><i></i><i></i><i></i><i></i></div>
+              <div class="faq-v3-phone-button">Aktifkan Sekarang</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-v3-sim-card" aria-hidden="true">
+          <div class="faq-v3-sim-logo">HALO<small>TELCO</small></div>
+          <span class="faq-v3-sim-chip"></span>
+          <strong>5G</strong>
+        </div>
+
+        <div class="faq-v3-qr-card" aria-hidden="true">
+          <div class="faq-v3-qr-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <span>Scan &amp; Activate</span>
+        </div>
+
+        <div class="faq-v3-chip faq-v3-chip--one"><i></i><span><small>Status</small><strong>eSIM Aktif</strong></span></div>
+        <div class="faq-v3-chip faq-v3-chip--two"><i></i><span><small>Rangkaian</small><strong>5G Connected</strong></span></div>
+        <div class="faq-v3-chip faq-v3-chip--three"><i></i><span><small>Keselamatan</small><strong>QR Verified</strong></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-v2-nav-section" aria-label="Kategori bantuan">
+    <div class="wrap">
+      <nav class="faq-v2-tabs" data-faq-tabs>
+        <button class="is-active" type="button" data-faq-target="all" aria-pressed="true">Semua</button>
+        <button type="button" data-faq-target="faq-esim" aria-pressed="false">eSIM</button>
+        <button type="button" data-faq-target="faq-physical" aria-pressed="false">Simkad Fizikal</button>
+        <button type="button" data-faq-target="faq-troubleshoot" aria-pressed="false">Penyelesaian Masalah</button>
+      </nav>
+    </div>
+  </section>
+
+  <section class="faq-v2-quick-section" aria-labelledby="quick-help-title">
+    <div class="wrap">
+      <header class="faq-v2-section-head">
+        <div class="eyebrow">Bantuan Pantas</div>
+        <h2 id="quick-help-title">Mulakan dengan topik paling dicari</h2>
+        <p>Terus lompat ke jawapan yang paling kerap diperlukan pengguna Halo Telco.</p>
+      </header>
+      <div class="faq-v2-quick-grid">
+        <button type="button" class="faq-v2-quick-card" data-faq-open="faq-1-4">
+          <span class="faq-v2-quick-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"></rect><path d="M8 7h3v3H8zM14 7h2M14 10h2M8 14h8M8 17h5"></path></svg></span>
+          <span><small>Langkah demi langkah</small><strong>Aktifkan eSIM</strong><em>Imbas kod QR dan aktifkan rangkaian.</em></span>
+          <svg class="faq-v2-arrow" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+        </button>
+        <button type="button" class="faq-v2-quick-card" data-faq-open="faq-2-3">
+          <span class="faq-v2-quick-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><path d="M5 5h14v14H5z"></path><path d="M9 9h6v6H9z"></path><path d="m7 17 10-10"></path></svg></span>
+          <span><small>Keselamatan akaun</small><strong>SIM Hilang atau Rosak</strong><em>Dapatkan gantian dan kekalkan nombor.</em></span>
+          <svg class="faq-v2-arrow" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+        </button>
+        <button type="button" class="faq-v2-quick-card" data-faq-open="faq-3-1">
+          <span class="faq-v2-quick-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 17a11 11 0 0 1 16 0"></path><path d="M7 14a7 7 0 0 1 10 0"></path><path d="M10 11a3 3 0 0 1 4 0"></path><circle cx="12" cy="19" r="1"></circle></svg></span>
+          <span><small>Troubleshooting</small><strong>Tiada Rangkaian</strong><em>Semak APN, pelan dan sambungan peranti.</em></span>
+          <svg class="faq-v2-arrow" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-v2-content-section" aria-labelledby="faq-list-title">
+    <div class="wrap faq-v2-layout">
+      <aside class="faq-v2-sticky-nav" aria-label="Navigasi FAQ">
+        <span class="faq-v2-sticky-label">Dalam halaman ini</span>
+        <a href="#faq-esim" class="is-active">eSIM</a>
+        <a href="#faq-physical">Simkad Fizikal</a>
+        <a href="#faq-troubleshoot">Masalah &amp; Penyelesaian</a>
+        <div class="faq-v2-mini-help"><span><i></i>Team Halo</span><p>Perlukan bantuan lanjut?</p><a href="https://wa.me/60105015754" target="_blank" rel="noopener noreferrer">WhatsApp Kami</a></div>
+      </aside>
+      <div class="faq-v2-faq-column">
+        <header class="faq-v2-content-head">
+          <div><div class="eyebrow">Soalan Lazim</div><h2 id="faq-list-title">Semua jawapan di satu tempat</h2></div>
+          <span id="faqResultCount" aria-live="polite">9 soalan</span>
+        </header>
+        <div class="faq-group" id="faq-esim">
 <div class="faq-group-title">eSIM</div>
-<details class="faq-item" open="">
-<summary>Apakah itu eSIM dan apa bezanya dengan simkad fizikal?
+<details class="faq-item" data-category="esim" data-faq-item="" id="faq-1-1" open="">
+<summary data-faq-summary="">Apakah itu eSIM dan apa bezanya dengan simkad fizikal?
           <svg class="plus" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
 </summary>
 <div class="faq-answer">
@@ -66,8 +175,8 @@
 <p>Kelebihan utama eSIM ialah anda boleh mengaktifkannya terus melalui aplikasi tanpa perlu ke kedai, dan sesuai untuk peranti yang tidak mempunyai slot simkad fizikal.</p>
 </div>
 </details>
-<details class="faq-item">
-<summary>Peranti mana yang menyokong eSIM?
+<details class="faq-item" data-category="esim" data-faq-item="" id="faq-1-2">
+<summary data-faq-summary="">Peranti mana yang menyokong eSIM?
           <svg class="plus" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
 </summary>
 <div class="faq-answer">
@@ -81,8 +190,8 @@
 <p>Untuk memastikan peranti anda serasi, semak tetapan <strong>Tetapan &gt; Rangkaian Selular</strong> pada peranti dan cari pilihan "Tambah eSIM" atau "Add Cellular Plan".</p>
 </div>
 </details>
-<details class="faq-item">
-<summary>Bagaimana cara mendapatkan eSIM Halo Telco?
+<details class="faq-item" data-category="esim" data-faq-item="" id="faq-1-3">
+<summary data-faq-summary="">Bagaimana cara mendapatkan eSIM Halo Telco?
           <svg class="plus" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
 </summary>
 <div class="faq-answer">
@@ -96,8 +205,8 @@
 </ul>
 </div>
 </details>
-<details class="faq-item">
-<summary>Bagaimana cara mengaktifkan eSIM melalui kod QR?
+<details class="faq-item" data-category="esim" data-faq-item="" id="faq-1-4">
+<summary data-faq-summary=""><span class="faq-v2-badge">Popular</span>Bagaimana cara mengaktifkan eSIM melalui kod QR?
           <svg class="plus" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
 </summary>
 <div class="faq-answer">
@@ -113,26 +222,26 @@
 </div>
 </details>
 </div>
-<div class="faq-group">
+<div class="faq-group" id="faq-physical">
 <div class="faq-group-title">Simkad Fizikal</div>
-<details class="faq-item">
-<summary>Bagaimana cara mengaktifkan simkad fizikal baharu?
+<details class="faq-item" data-category="simkad fizikal" data-faq-item="" id="faq-2-1">
+<summary data-faq-summary="">Bagaimana cara mengaktifkan simkad fizikal baharu?
           <svg class="plus" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
 </summary>
 <div class="faq-answer">
 <p>Masukkan simkad ke dalam peranti, muat turun aplikasi Halo Telco, daftar akaun menggunakan nombor simkad, dan lengkapkan pengesahan identiti (e-KYC) mengikut arahan dalam aplikasi. Pengaktifan biasanya mengambil masa 5–30 minit selepas pengesahan berjaya.</p>
 </div>
 </details>
-<details class="faq-item">
-<summary>Bolehkah saya tukar simkad fizikal saya kepada eSIM?
+<details class="faq-item" data-category="simkad fizikal" data-faq-item="" id="faq-2-2">
+<summary data-faq-summary="">Bolehkah saya tukar simkad fizikal saya kepada eSIM?
           <svg class="plus" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
 </summary>
 <div class="faq-answer">
 <p>Ya. Nombor dan baki sedia ada anda akan dikekalkan sepenuhnya. Anda boleh memohon penukaran melalui aplikasi Halo Telco (<strong>Akaun &gt; Tukar ke eSIM</strong>) atau di mana-mana kedai rakan niaga Halo Telco terdekat. Simkad fizikal lama akan dinyahaktifkan sebaik sahaja eSIM baharu berjaya diaktifkan.</p>
 </div>
 </details>
-<details class="faq-item">
-<summary>Simkad saya hilang atau rosak — bagaimana cara mendapatkan gantian?
+<details class="faq-item" data-category="simkad fizikal" data-faq-item="" id="faq-2-3">
+<summary data-faq-summary=""><span class="faq-v2-badge">Penting</span>Simkad saya hilang atau rosak — bagaimana cara mendapatkan gantian?
           <svg class="plus" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
 </summary>
 <div class="faq-answer">
@@ -140,10 +249,10 @@
 </div>
 </details>
 </div>
-<div class="faq-group">
+<div class="faq-group" id="faq-troubleshoot">
 <div class="faq-group-title">Masalah &amp; Penyelesaian</div>
-<details class="faq-item">
-<summary>Kenapa simkad atau eSIM saya tidak mempunyai rangkaian?
+<details class="faq-item" data-category="masalah &amp; penyelesaian" data-faq-item="" id="faq-3-1">
+<summary data-faq-summary=""><span class="faq-v2-badge">Popular</span>Kenapa simkad atau eSIM saya tidak mempunyai rangkaian?
           <svg class="plus" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
 </summary>
 <div class="faq-answer">
@@ -157,8 +266,8 @@
 <p>Jika masalah berterusan selepas langkah di atas, hubungi khidmat pelanggan kami melalui WhatsApp untuk semakan lanjut.</p>
 </div>
 </details>
-<details class="faq-item">
-<summary>Bagaimana cara memindahkan nombor saya ke peranti baharu?
+<details class="faq-item" data-category="masalah &amp; penyelesaian" data-faq-item="" id="faq-3-2">
+<summary data-faq-summary="">Bagaimana cara memindahkan nombor saya ke peranti baharu?
           <svg class="plus" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
 </summary>
 <div class="faq-answer">
@@ -166,25 +275,22 @@
 </div>
 </details>
 </div>
-<p aria-live="polite" class="no-results" id="noResults">Tiada soalan sepadan dengan carian anda. Cuba kata kunci lain.</p>
-<!-- Still need help -->
-<div class="help-contact">
-<div>
-<h4>Masih perlukan bantuan?</h4>
-<p>Pasukan sokongan kami sedia membantu setiap hari bekerja.</p>
-</div>
-<div style="display:flex;gap:10px;flex-wrap:wrap;">
-<a class="btn btn-primary btn-sm" href="https://wa.me/60105015754" rel="noopener noreferrer" target="_blank">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.32 4.95L2 22l5.24-1.37a9.9 9.9 0 0 0 4.8 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm5.83 14.17c-.24.68-1.4 1.3-1.93 1.36-.5.06-1.12.09-1.8-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.17-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.81 2 .88 2.15.07.14.11.31.02.5-.09.19-.14.31-.28.48-.14.16-.29.36-.42.48-.14.14-.28.28-.12.56.16.28.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.11.6-.07.16-.19.68-.79.87-1.06.19-.28.37-.23.62-.14.26.1 1.65.78 1.93.92.28.14.47.21.53.33.07.13.07.72-.17 1.4z"></path></svg>
-          WhatsApp Kami
-        </a>
-<a class="btn btn-outline btn-sm" href="location.html">Cari Kedai Berhampiran</a>
-</div>
-</div>
-</div>
-</section></main>
-<!-- ============ HELP LAYOUT (sidebar + accordion) ============ -->
-<!-- ============ FOOTER ============ -->
+        <p aria-live="polite" class="no-results" id="noResults">Tiada soalan sepadan. Cuba kata kunci lain atau hubungi Team Halo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-v2-support-section">
+    <div class="wrap">
+      <div class="faq-v2-support-card">
+        <span class="faq-v2-support-grid" aria-hidden="true"></span>
+        <div class="faq-v2-support-copy"><div class="faq-v2-kicker"><span></span>Sokongan Team Halo</div><h2>Masih perlukan bantuan?</h2><p>Pasukan kami sedia membantu untuk pertanyaan berkaitan simkad, eSIM dan akaun Halo Telco pada hari bekerja.</p><span class="faq-v2-hours"><i></i>Isnin – Jumaat · 9.00am – 6.00pm</span></div>
+        <div class="faq-v2-support-actions"><a class="btn faq-v2-gold-btn" href="https://wa.me/60105015754" target="_blank" rel="noopener noreferrer">WhatsApp Team Halo</a><a class="btn faq-v2-outline-btn" href="location.html">Cari Lokasi</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
 <footer class="site-footer" id="hubungi">
 <div class="wrap">
 <div class="footer-top">
@@ -268,8 +374,6 @@
 </div>
 </div>
 </footer>
-<!-- Small vanilla JS: live text search across the FAQ accordion (no framework, no build step) -->
-
 <div class="halogo-floating-tools" data-floating-tools="">
 <button aria-label="Kembali ke bahagian atas halaman" class="halogo-back-to-top" data-back-to-top="" title="Kembali ke atas" type="button">
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><path d="m6 15 6-6 6 6"></path></svg>
@@ -310,5 +414,6 @@
 <span>WhatsApp</span>
 </button>
 </div>
-</div></body>
+</div>
+</body>
 </html>
