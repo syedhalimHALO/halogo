@@ -78,7 +78,6 @@
 
       const primaryTiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
-        crossOrigin: true,
         attribution: "&copy; OpenStreetMap contributors"
       });
 
@@ -89,8 +88,7 @@
           L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
             maxZoom: 20,
             subdomains: "abcd",
-            crossOrigin: true,
-            attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
+                attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
           }).addTo(map);
         }
       });
@@ -128,7 +126,19 @@
     }
   }
 
-  const mapReady = initializeMap();
+  let mapReady = false;
+
+  function waitForStableMapSize(callback, attempts = 0) {
+    const rect = mapElement?.getBoundingClientRect();
+    const ready = rect && rect.width >= 500 && rect.height >= 320;
+
+    if (ready || attempts >= 30) {
+      callback();
+      return;
+    }
+
+    window.setTimeout(() => waitForStableMapSize(callback, attempts + 1), 100);
+  }
 
   [...new Set(stores.map(store => store.state))].sort().forEach(state => {
     const option = document.createElement("option");
@@ -332,19 +342,38 @@
   searchInput?.addEventListener("input", renderStores);
   [typeFilter, stateFilter, sortFilter].forEach(input => input?.addEventListener("change", renderStores));
   locateButtons.forEach(button => button.addEventListener("click", useMyLocation));
-
+  // Render the list first so the page is immediately usable.
   renderStores();
 
-  // Final layout sync after CSS, fonts and the results panel have settled.
-  const refreshMapLayout = () => {
-    if (!map) return;
-    window.requestAnimationFrame(() => map.invalidateSize({ pan: false, animate: false }));
+  const startMap = () => {
+    waitForStableMapSize(() => {
+      mapReady = initializeMap();
+
+      // Re-render after map creation so markers and bounds are added correctly.
+      renderStores();
+
+      const refreshMapLayout = () => {
+        if (!map) return;
+        window.requestAnimationFrame(() => {
+          map.invalidateSize({ pan: false, animate: false });
+        });
+      };
+
+      window.setTimeout(refreshMapLayout, 100);
+      window.setTimeout(refreshMapLayout, 500);
+      window.setTimeout(refreshMapLayout, 1200);
+
+      if (document.fonts?.ready) {
+        document.fonts.ready.then(refreshMapLayout).catch(() => {});
+      }
+
+      window.addEventListener("resize", refreshMapLayout, { passive: true });
+    });
   };
 
-  window.setTimeout(refreshMapLayout, 250);
-  window.setTimeout(refreshMapLayout, 900);
-
-  if (document.fonts?.ready) {
-    document.fonts.ready.then(refreshMapLayout).catch(() => {});
+  if (document.readyState === "complete") {
+    startMap();
+  } else {
+    window.addEventListener("load", startMap, { once: true });
   }
 })();
