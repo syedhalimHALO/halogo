@@ -18,7 +18,7 @@
   <script defer src="js/script.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-  <script defer src="js/location.js?v=20260806-concept-mini-store-v2"></script>
+  <script defer src="js/location.js?v=20260806-premium-hero-v3"></script>
 </head>
 <body class="has-floating-assistant location-page">
 <header class="site-header luxury-header">
@@ -39,19 +39,38 @@
 </header>
 
 <main>
-  <section class="locator-compact-hero">
-    <div class="location-wrap locator-compact-hero__inner">
-      <div>
+  <section class="locator-premium-hero" aria-labelledby="location-hero-title">
+    <div class="locator-premium-ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="location-wrap locator-premium-hero__inner">
+      <div class="locator-premium-copy">
         <div class="eyebrow">Store Locator</div>
-        <h1>Temui lokasi Halo Telco<br><span>berdekatan anda</span></h1>
-        <p>Direktori ini memaparkan <strong>18 Concept Store dan Mini Store</strong> berdasarkan senarai lokasi terbaru Halo Telco.</p>
+        <h1 id="location-hero-title">Temui lokasi Halo Telco<span> berdekatan anda</span></h1>
+        <p>Cari <strong>Concept Store dan Mini Store Halo Telco</strong> di seluruh Malaysia dengan lebih mudah.</p>
+        <form class="locator-hero-search" id="heroLocationSearch" role="search">
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.3"></circle></svg>
+          <input id="heroSearchInput" type="search" placeholder="Cari lokasi, cth: Kuala Lumpur" autocomplete="off" aria-label="Cari lokasi Halo Telco">
+          <button type="submit" aria-label="Cari lokasi">
+            <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+          </button>
+        </form>
+        <div class="locator-compact-stats" aria-label="Ringkasan lokasi">
+          <article><span class="locator-stat-icon">⌂</span><strong>18</strong><span>Lokasi Aktif</span></article>
+          <article><span class="locator-stat-icon">⌖</span><strong>11</strong><span>Negeri</span></article>
+          <article><span class="locator-stat-icon">▦</span><strong>2</strong><span>Jenis Store</span></article>
+        </div>
       </div>
-      <div class="locator-compact-stats" aria-label="Ringkasan lokasi">
-        <article><strong>18</strong><span>Lokasi Aktif</span></article>
-        <article><strong>11</strong><span>Negeri</span></article>
-        <article><strong>2</strong><span>Jenis Store</span></article>
+      <div class="locator-premium-visual" aria-label="Pelanggan mencari Halo Telco Concept Store melalui telefon">
+        <div class="locator-photo-frame">
+          <img src="images/location-hero-premium.webp" alt="Pelanggan menggunakan telefon di hadapan Halo Telco Concept Store" width="1210" height="1440" decoding="async" fetchpriority="high">
+          <div class="locator-photo-shade" aria-hidden="true"></div>
+        </div>
+        <div class="locator-route" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="locator-pin-badge" aria-hidden="true"><span></span></div>
+        <div class="locator-floating-card locator-floating-card--top"><small>Lokasi terdekat</small><strong>Halo Telco Store</strong><span>0.8 km dari anda</span></div>
+        <div class="locator-floating-card locator-floating-card--bottom"><span class="locator-live-dot"></span><div><strong>18 lokasi aktif</strong><small>Di seluruh Malaysia</small></div></div>
       </div>
     </div>
+    <a class="locator-scroll-cue" href="#locator"><span>↓</span> Scroll untuk terokai</a>
   </section>
 
   <section class="location-locator-section" id="locator" aria-labelledby="locator-title">
