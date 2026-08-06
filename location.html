@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
   <link rel="stylesheet" href="css/style-amended.css">
-  <link rel="stylesheet" href="css/location-style.css">
+  <link rel="stylesheet" href="css/location-style.css?v=20260806-metallic-stats-v1">
   <script defer src="js/script.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
@@ -53,10 +53,72 @@
             <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
           </button>
         </form>
-        <div class="locator-compact-stats" aria-label="Ringkasan lokasi">
-          <article><span class="locator-stat-icon">⌂</span><strong>18</strong><span>Lokasi Aktif</span></article>
-          <article><span class="locator-stat-icon">⌖</span><strong>11</strong><span>Negeri</span></article>
-          <article><span class="locator-stat-icon">▦</span><strong>2</strong><span>Jenis Store</span></article>
+        <div class="locator-compact-stats locator-metallic-stats" aria-label="Ringkasan lokasi">
+          <article class="locator-metallic-stat">
+            <span class="locator-stat-shine" aria-hidden="true"></span>
+            <span class="locator-stat-icon locator-stat-icon--pin" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img">
+                <defs>
+                  <linearGradient id="metal-pin" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#ffffff"/>
+                    <stop offset="22%" stop-color="#aeb3ba"/>
+                    <stop offset="48%" stop-color="#f7f8fa"/>
+                    <stop offset="72%" stop-color="#777d85"/>
+                    <stop offset="100%" stop-color="#d9dde2"/>
+                  </linearGradient>
+                </defs>
+                <path d="M32 7c-10.2 0-18.5 8.2-18.5 18.3C13.5 39 32 57 32 57s18.5-18 18.5-31.7C50.5 15.2 42.2 7 32 7Z" fill="url(#metal-pin)" stroke="#f8fafc" stroke-width="2.2"/>
+                <circle cx="32" cy="25" r="7" fill="#5f0b10" stroke="#ffffff" stroke-width="2"/>
+                <ellipse cx="32" cy="57" rx="16" ry="3.8" fill="none" stroke="url(#metal-pin)" stroke-width="3"/>
+              </svg>
+            </span>
+            <span class="locator-stat-copy"><strong>18</strong><span>Lokasi Aktif</span></span>
+            <span class="locator-stat-arrow" aria-hidden="true">›</span>
+          </article>
+
+          <article class="locator-metallic-stat">
+            <span class="locator-stat-shine" aria-hidden="true"></span>
+            <span class="locator-stat-icon locator-stat-icon--map" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img">
+                <defs>
+                  <linearGradient id="metal-map" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#ffffff"/>
+                    <stop offset="24%" stop-color="#aeb3ba"/>
+                    <stop offset="52%" stop-color="#f5f6f8"/>
+                    <stop offset="78%" stop-color="#6f757d"/>
+                    <stop offset="100%" stop-color="#d9dde2"/>
+                  </linearGradient>
+                </defs>
+                <path d="M10 17 24 10l16 7 14-7v37l-14 7-16-7-14 7V17Z" fill="none" stroke="url(#metal-map)" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M24 10v37M40 17v37" stroke="#f6f7f9" stroke-width="2.4"/>
+                <circle cx="32" cy="31" r="5.5" fill="#760b11" stroke="#fff" stroke-width="2"/>
+              </svg>
+            </span>
+            <span class="locator-stat-copy"><strong>11</strong><span>Negeri</span></span>
+            <span class="locator-stat-arrow" aria-hidden="true">›</span>
+          </article>
+
+          <article class="locator-metallic-stat">
+            <span class="locator-stat-shine" aria-hidden="true"></span>
+            <span class="locator-stat-icon locator-stat-icon--store" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img">
+                <defs>
+                  <linearGradient id="metal-store" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#ffffff"/>
+                    <stop offset="25%" stop-color="#aeb3ba"/>
+                    <stop offset="50%" stop-color="#f7f8fa"/>
+                    <stop offset="76%" stop-color="#737981"/>
+                    <stop offset="100%" stop-color="#d9dde2"/>
+                  </linearGradient>
+                </defs>
+                <path d="M11 24h42l-4-12H15l-4 12Z" fill="url(#metal-store)" stroke="#ffffff" stroke-width="2"/>
+                <path d="M14 24v27h36V24" fill="none" stroke="url(#metal-store)" stroke-width="4"/>
+                <path d="M24 51V36h16v15M11 24c1.5 6 9 6 10.5 0 1.5 6 9 6 10.5 0 1.5 6 9 6 10.5 0 1.5 6 9 6 10.5 0" fill="none" stroke="#f8fafc" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="locator-stat-copy"><strong>2</strong><span>Jenis Store</span></span>
+            <span class="locator-stat-arrow" aria-hidden="true">›</span>
+          </article>
         </div>
       </div>
       <div class="locator-premium-visual" aria-label="Pelanggan mencari Halo Telco Concept Store melalui telefon">
