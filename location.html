@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#230508">
   <link rel="icon" href="data:,">
-  <meta name="description" content="Cari lokasi Halo Telco yang mempunyai koordinat peta aktif di seluruh Malaysia.">
+  <meta name="description" content="Cari Concept Store dan Mini Store Halo Telco berdekatan anda di seluruh Malaysia.">
   <title>Lokasi Halo Telco | HaloGo Partner</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -18,7 +18,7 @@
   <script defer src="js/script.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-  <script defer src="js/location.js?v=20260806-coordinates-only-v1"></script>
+  <script defer src="js/location.js?v=20260806-concept-mini-store-v2"></script>
 </head>
 <body class="has-floating-assistant location-page">
 <header class="site-header luxury-header">
@@ -43,13 +43,13 @@
     <div class="location-wrap locator-compact-hero__inner">
       <div>
         <div class="eyebrow">Store Locator</div>
-        <h1>Cari lokasi Halo Telco<br><span>berdekatan anda</span></h1>
-        <p>Direktori ini memaparkan 12 lokasi daripada tab <strong>With Coordinates</strong> yang mempunyai koordinat Malaysia yang sah.</p>
+        <h1>Temui lokasi Halo Telco<br><span>berdekatan anda</span></h1>
+        <p>Direktori ini memaparkan <strong>18 Concept Store dan Mini Store</strong> berdasarkan senarai lokasi terbaru Halo Telco.</p>
       </div>
       <div class="locator-compact-stats" aria-label="Ringkasan lokasi">
-        <article><strong>12</strong><span>Lokasi Aktif</span></article>
-        <article><strong>9</strong><span>Negeri</span></article>
-        <article><strong>100%</strong><span>Boleh Dizum</span></article>
+        <article><strong>18</strong><span>Lokasi Aktif</span></article>
+        <article><strong>11</strong><span>Negeri</span></article>
+        <article><strong>2</strong><span>Jenis Store</span></article>
       </div>
     </div>
   </section>
@@ -57,9 +57,9 @@
   <section class="location-locator-section" id="locator" aria-labelledby="locator-title">
     <div class="location-wrap">
       <header class="location-section-head">
-        <div class="eyebrow">Lokasi Dengan Koordinat</div>
-        <h2 id="locator-title">Pilih lokasi, kemudian peta akan zum secara automatik</h2>
-        <p>Klik mana-mana kad lokasi atau marker pada peta untuk melihat lokasi dengan lebih dekat.</p>
+        <div class="eyebrow">Concept &amp; Mini Store</div>
+        <h2 id="locator-title">Peta Interaktif</h2>
+        <p>Cari mengikut bandar, negeri atau jenis store. Klik butang <strong>Arah</strong> untuk membuka alamat penuh di Google Maps.</p>
       </header>
 
       <div class="location-toolbar">
@@ -87,7 +87,7 @@
           <div id="map" role="application" aria-label="Peta lokasi Halo Telco"></div>
           <div class="location-map-status">
             <span><i></i>Peta Interaktif</span>
-            <small>Scroll mouse dan butang + / − telah diaktifkan</small>
+            <small>Klik marker atau kad untuk fokus ke kawasan store</small>
           </div>
           <button class="location-reset-map" id="resetMapBtn" type="button">Lihat Semua</button>
         </div>
@@ -95,10 +95,11 @@
           <div class="location-results-head">
             <div>
               <span class="location-micro-label">Lokasi ditemui</span>
-              <h3><span id="resultCount">12</span> lokasi</h3>
+              <h3><span id="resultCount">18</span> lokasi</h3>
             </div>
           </div>
           <div class="location-store-list" id="storeList"></div>
+          <p class="location-results-note">Waktu operasi mungkin berubah pada cuti umum. Hubungi store sebelum berkunjung.</p>
         </aside>
       </div>
     </div>
