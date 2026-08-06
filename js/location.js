@@ -15,6 +15,8 @@
   const stateFilter = document.getElementById("stateFilter");
   const locateBtn = document.getElementById("toolbarLocateBtn");
   const resetMapBtn = document.getElementById("resetMapBtn");
+  const heroSearchForm = document.getElementById("heroLocationSearch");
+  const heroSearchInput = document.getElementById("heroSearchInput");
 
   if (!mapElement || !storeList || !resultCount || !searchInput || !typeFilter || !stateFilter || !locateBtn || !resetMapBtn) return;
 
@@ -273,6 +275,14 @@
     stateFilter.addEventListener("change", render);
     locateBtn.addEventListener("click", useMyLocation);
     resetMapBtn.addEventListener("click", fitVisibleStores);
+
+    heroSearchForm?.addEventListener("submit", event => {
+      event.preventDefault();
+      searchInput.value = heroSearchInput?.value.trim() || "";
+      document.getElementById("locator")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      render();
+      window.setTimeout(() => searchInput.focus({ preventScroll: true }), 650);
+    });
 
     window.setTimeout(() => map.invalidateSize({ pan: false, animate: false }), 250);
     document.fonts?.ready?.then(() => map.invalidateSize({ pan: false, animate: false }));
