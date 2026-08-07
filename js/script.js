@@ -788,7 +788,7 @@
         medal.setAttribute("src", expectedSource);
       }
 
-      medal.setAttribute("alt", `Badge ${rank.charAt(0).toUpperCase() + rank.slice(1)} Dealer`);
+      medal.setAttribute("alt", `Momentum ${rank.charAt(0).toUpperCase() + rank.slice(1)} — medal ilustrasi simulasi`);
     };
 
     const observer = new MutationObserver(applyWebPSource);
