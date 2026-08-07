@@ -746,3 +746,72 @@
 })();
 
 
+
+
+/**
+ * HaloGo Partner — WebP rank badge compatibility patch
+ * Keeps the commission calculator on the premium WebP medal assets even if
+ * another calculator script still assigns the previous badge-*.png paths.
+ */
+(() => {
+  "use strict";
+
+  const initialiseWebPRankBadges = () => {
+    const medal = document.querySelector("[data-halo-medal]");
+    if (!medal || medal.dataset.webpBadgeReady === "true") return;
+
+    medal.dataset.webpBadgeReady = "true";
+
+    const badgeSources = {
+      bronze: "images/Bronze.webp",
+      silver: "images/Silver.webp",
+      gold: "images/Gold.webp",
+      diamond: "images/Diamond.webp"
+    };
+
+    const normaliseRank = (value = "") => {
+      const source = String(value).toLowerCase();
+
+      if (source.includes("diamond")) return "diamond";
+      if (source.includes("gold")) return "gold";
+      if (source.includes("silver")) return "silver";
+      return "bronze";
+    };
+
+    const applyWebPSource = () => {
+      const rankLabel = document.querySelector("[data-halo-rank]")?.textContent || "";
+      const currentSource = medal.getAttribute("src") || "";
+      const rank = normaliseRank(`${rankLabel} ${currentSource}`);
+      const expectedSource = badgeSources[rank];
+
+      if (expectedSource && currentSource !== expectedSource) {
+        medal.setAttribute("src", expectedSource);
+      }
+
+      medal.setAttribute("alt", `Badge ${rank.charAt(0).toUpperCase() + rank.slice(1)} Dealer`);
+    };
+
+    const observer = new MutationObserver(applyWebPSource);
+    observer.observe(medal, {
+      attributes: true,
+      attributeFilter: ["src"]
+    });
+
+    const rankLabel = document.querySelector("[data-halo-rank]");
+    if (rankLabel) {
+      observer.observe(rankLabel, {
+        childList: true,
+        characterData: true,
+        subtree: true
+      });
+    }
+
+    applyWebPSource();
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initialiseWebPRankBadges);
+  } else {
+    initialiseWebPRankBadges();
+  }
+})();
