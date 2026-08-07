@@ -484,12 +484,32 @@ body.business-page .luxury-v3-section::before {
 <aside aria-live="polite" class="halo-calc-result halo-calc-result--compact">
 <div class="halo-calc-result-head"><span>Anggaran Komisen Bulanan</span><strong>Tier 1</strong></div>
 <div class="halo-calc-total-copy"><output data-halo-total="">RM0.00</output><small>Berdasarkan jualan <strong data-halo-summary-qty="">0 SIM</strong> daripada <strong data-halo-summary-plans="">0 pelan</strong></small></div>
-<div class="halo-calc-breakdown halo-calc-breakdown--compact">
-<div><span><i>A</i><b>Pendapatan Pasif</b></span><strong data-halo-passive="">RM0.00</strong></div>
-<div><span><i>B</i><b>Komisen Aktivasi</b></span><strong data-halo-activation="">RM0.00</strong></div>
-<div><span><i>C</i><b>Bonus Prestasi</b></span><strong data-halo-bonus="">RM0.00</strong></div>
-<div><span><i>D</i><b>Komisen MNP</b></span><strong data-halo-mnp-result="">RM0.00</strong></div>
-<div><span><i>E</i><b>SIM Redemption</b></span><strong data-halo-redemption="">RM0.00</strong></div>
+<div class="halo-calc-breakdown halo-calc-breakdown--compact halo-calc-breakdown--formula">
+<div>
+  <span class="halo-breakdown-name"><i>A</i><span><b>Pendapatan Pasif</b><small data-halo-passive-formula="">10% × RM0.00 jualan</small></span></span>
+  <span class="halo-breakdown-rate" data-halo-passive-rate="">10%</span>
+  <strong data-halo-passive="">RM0.00</strong>
+</div>
+<div>
+  <span class="halo-breakdown-name"><i>B</i><span><b>Komisen Pengaktifan</b><small data-halo-activation-formula="">Kadar pelan × 0 SIM</small></span></span>
+  <span class="halo-breakdown-rate" data-halo-activation-rate="">RM0/SIM</span>
+  <strong data-halo-activation="">RM0.00</strong>
+</div>
+<div>
+  <span class="halo-breakdown-name"><i>C</i><span><b>Bonus Prestasi</b><small data-halo-bonus-formula="">RM2 × 0 SIM layak</small></span></span>
+  <span class="halo-breakdown-rate" data-halo-bonus-rate="">RM2/SIM</span>
+  <strong data-halo-bonus="">RM0.00</strong>
+</div>
+<div>
+  <span class="halo-breakdown-name"><i>D</i><span><b>Komisen MNP</b><small data-halo-mnp-formula="">RM10 × 0 SIM MNP</small></span></span>
+  <span class="halo-breakdown-rate" data-halo-mnp-rate="">RM10/MNP</span>
+  <strong data-halo-mnp-result="">RM0.00</strong>
+</div>
+<div>
+  <span class="halo-breakdown-name"><i>E</i><span><b>SIM Redemption</b><small data-halo-redemption-formula="">Tiada nilai dalam simulasi ini</small></span></span>
+  <span class="halo-breakdown-rate halo-breakdown-rate--muted">—</span>
+  <strong data-halo-redemption="">RM0.00</strong>
+</div>
 </div>
 <div class="halo-calc-total-bar"><span>Jumlah Komisen</span><strong data-halo-total-bar="">RM0.00</strong></div>
 <p class="halo-compact-disclaimer">Simulasi ini adalah untuk rujukan Tier 1 sahaja. Pengiraan komisen sebenar akan ditentukan oleh pihak Halo Telco berdasarkan transaksi layak, rekod sistem serta terma dan polisi semasa.</p>
@@ -497,16 +517,23 @@ body.business-page .luxury-v3-section::before {
 <aside aria-label="Momentum jualan" class="halo-calc-achievement halo-calc-achievement--compact">
 <span class="halo-achievement-kicker">Momentum Jualan</span>
 <img alt="Badge Bronze Dealer" class="halo-rank-badge" data-halo-medal="" decoding="async" height="720" loading="lazy" src="images/Bronze.webp" width="720"/>
-<h3 data-halo-rank="">Bronze Dealer</h3>
+<h3 data-halo-rank="">Momentum Bronze</h3>
 <p data-halo-motivation="">Mulakan dengan memasukkan kuantiti pelan yang telah dijual.</p>
 <div class="halo-achievement-progress-copy"><strong><span data-halo-progress-current="">0</span> / <span data-halo-progress-target="">10</span> SIM</strong><small data-halo-progress-percent="">0%</small></div>
 <div class="halo-achievement-progress"><i data-halo-progress-bar=""></i></div>
-<p class="halo-next-rank-copy" data-halo-progress-copy="">Menuju ke Silver Dealer</p>
+<p class="halo-next-rank-copy" data-halo-progress-copy="">Menuju ke Momentum Silver</p>
 <div class="halo-achievement-levels halo-achievement-levels--compact">
 <div class="is-current" data-halo-level="bronze"><img alt="" decoding="async" height="720" loading="lazy" src="images/Bronze.webp" width="720"/><span><strong>Bronze</strong><small>0–9</small></span></div>
 <div data-halo-level="silver"><img alt="" decoding="async" height="720" loading="lazy" src="images/Silver.webp" width="720"/><span><strong>Silver</strong><small>10–29</small></span></div>
 <div data-halo-level="gold"><img alt="" decoding="async" height="720" loading="lazy" src="images/Gold.webp" width="720"/><span><strong>Gold</strong><small>30–74</small></span></div>
 <div data-halo-level="diamond"><img alt="" decoding="async" height="720" loading="lazy" src="images/Diamond.webp" width="720"/><span><strong>Diamond</strong><small>75+</small></span></div>
+</div>
+<div class="halo-momentum-disclaimer" role="note" aria-label="Nota simulasi Momentum Jualan">
+  <span class="halo-momentum-disclaimer-icon" aria-hidden="true">i</span>
+  <div>
+    <strong>Nota Simulasi</strong>
+    <p>Momentum Jualan dan medal yang dipaparkan hanyalah ilustrasi simulasi. Ia bukan ranking, pengiktirafan, ganjaran atau kempen rasmi Halo Telco.</p>
+  </div>
 </div>
 </aside>
 </div>
