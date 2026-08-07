@@ -20607,3 +20607,155 @@ body.help-page .faq-v3-photo-route span:nth-child(3){right:4%;top:-4px}
   body.help-page .faq-v3-photo-ring,body.help-page .faq-v3-photo-chip,body.help-page .faq-v3-scan-beam{animation:none!important}
   body.help-page .faq-v3-photo-frame img,body.help-page .faq-v3-photo-visual{transition:none!important}
 }
+
+
+/* ========================================================================
+   HaloGo Partner — Commission Calculator V4
+   Formula transparency + Momentum simulation disclaimer
+   ======================================================================== */
+
+body.business-page .halo-calc-breakdown--formula > div {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto minmax(82px, auto) !important;
+  gap: 12px !important;
+  align-items: center !important;
+}
+
+body.business-page .halo-calc-breakdown--formula .halo-breakdown-name {
+  display: grid !important;
+  min-width: 0;
+  grid-template-columns: 28px minmax(0, 1fr) !important;
+  gap: 9px !important;
+  align-items: center !important;
+}
+
+body.business-page .halo-calc-breakdown--formula .halo-breakdown-name > span {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+body.business-page .halo-calc-breakdown--formula .halo-breakdown-name b {
+  line-height: 1.25;
+}
+
+body.business-page .halo-calc-breakdown--formula .halo-breakdown-name small {
+  display: block !important;
+  overflow: hidden;
+  color: rgba(255,255,255,.55) !important;
+  font-size: 9.5px !important;
+  font-weight: 500;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body.business-page .halo-breakdown-rate {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 9px;
+  border: 1px solid rgba(239,205,137,.18);
+  border-radius: 999px;
+  background: rgba(239,205,137,.075);
+  color: #efd18f;
+  font-size: 9.5px;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+body.business-page .halo-breakdown-rate--muted {
+  border-color: rgba(255,255,255,.10);
+  background: rgba(255,255,255,.045);
+  color: rgba(255,255,255,.48);
+}
+
+body.business-page .halo-momentum-disclaimer {
+  display: grid;
+  grid-template-columns: 24px minmax(0,1fr);
+  gap: 10px;
+  margin-top: 15px;
+  padding: 12px 13px;
+  border: 1px solid rgba(227,28,37,.20);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fff8f8, #fffdfd);
+  text-align: left;
+}
+
+body.business-page .halo-momentum-disclaimer-icon {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border: 1.5px solid #e31c25;
+  border-radius: 50%;
+  color: #e31c25;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1;
+}
+
+body.business-page .halo-momentum-disclaimer strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #d91822;
+  font-size: 10.5px;
+  font-weight: 800;
+}
+
+body.business-page .halo-momentum-disclaimer p {
+  min-height: 0 !important;
+  margin: 0 !important;
+  color: #6c6668 !important;
+  font-size: 9.5px !important;
+  line-height: 1.5 !important;
+}
+
+body.business-page .halo-calc-achievement [data-halo-rank] {
+  margin-top: 3px;
+}
+
+@media (max-width: 1240px) {
+  body.business-page .halo-calc-breakdown--formula > div {
+    grid-template-columns: minmax(0, 1fr) minmax(76px, auto) !important;
+  }
+
+  body.business-page .halo-calc-breakdown--formula .halo-breakdown-rate {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  body.business-page .halo-calc-breakdown--formula > div > strong {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+  }
+}
+
+@media (max-width: 780px) {
+  body.business-page .halo-calc-breakdown--formula > div {
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    gap: 8px 10px !important;
+  }
+
+  body.business-page .halo-calc-breakdown--formula .halo-breakdown-name {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  body.business-page .halo-calc-breakdown--formula .halo-breakdown-rate {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  body.business-page .halo-calc-breakdown--formula > div > strong {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+  }
+}
