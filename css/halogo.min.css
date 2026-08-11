@@ -18449,3 +18449,38 @@ body.business-page.business-luxury-v3 .biz-toolkit-item:focus-visible {
     scroll-snap-stop:normal;
   }
 }
+/* =========================================================
+   MOBILE FIX — KENAPA PILIH HALO TELCO
+   Ensure phone visual/image is always visible on mobile
+   Date: 2026-08-11
+   ========================================================= */
+@media (max-width: 980px) {
+  .ht-why-header,
+  .ht-why-center {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .ht-why-section.is-visible .ht-why-header,
+  .ht-why-section.is-visible .ht-why-center {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .ht-phone-scene,
+  .ht-phone,
+  .ht-phone-screen,
+  .ht-phone-login-image {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .ht-phone-login-image {
+    display: block !important;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
